@@ -21,8 +21,9 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('welcome_message');
-		$this->load->view('pajar/tampilan');
-		$this->load->view('Insan/tampilan');
+	}
+	public function tampil_beda()
+	{
 		$this->load->view('fikar/tampilan');
 	}
 }
