@@ -32,4 +32,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('fikar/tampilan');
 	}
+	public function tampil_beda()
+	{
+		$this->load->view('Insan/tampilan');
+		$this->load->view('fikar/tampilan');
+	}
+
 }
