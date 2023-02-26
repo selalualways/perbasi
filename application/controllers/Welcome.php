@@ -26,12 +26,8 @@ class Welcome extends CI_Controller {
 	public function testingbeda()
 	{
 		$this->load->view('Insan/tampilan');
-  }
-  
-	public function tampil_beda()
-	{
-		$this->load->view('fikar/tampilan');
-	}
+  	}
+	
 	public function tampil_beda()
 	{
 		$this->load->view('Insan/tampilan');
