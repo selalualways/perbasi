@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Publik extends CI_Controller {
+class Nama_klub extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,9 +18,20 @@ class Publik extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
-	public function index()
+	public function __construct()
 	{
-		$this->load->view('klub/klub_list');
+		parent::__construct();
+    	$this->load->model('Klub_model');
+	}
+	
+	 public function index()
+	{
+		$data = array(
+		'data_klub' =>$this->Klub_model->get_all_klub(),
+
+		);
+
+		$this->load->view('klub/Klub_list', $data);
 	}
 
 }

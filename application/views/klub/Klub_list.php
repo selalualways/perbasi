@@ -1,0 +1,9 @@
+<table?>
+ <tr> 
+  <td>id_klub</td>
+  <td>nama_klub</td>
+  <td>pengurus</td>
+  <td>logo</td>
+  <td>struktur_pengurus</td>
+ </tr>
+</table>
