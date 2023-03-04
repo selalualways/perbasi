@@ -36,7 +36,7 @@
    <body class="game_info" data-spy="scroll" data-target=".header">
       <!-- LOADER -->
       <div id="preloader">
-         <img class="preloader" src="sports-master/images/loading-img.gif" alt="">
+         <img align="center" class="preloader" src="sports-master/images/loadng-gg.gif" height="250" alt="">
       </div>
       <!-- END LOADER -->
       <section id="top">
