@@ -9,6 +9,12 @@ public function get_all_klub()
    return $this->db->get('klub')->result(); 
  }
 
+ public function delete_klub($id_klub)
+ {
+   $this->db->where('id_klub', $id_klub);
+   $this->db->delete('klub'); 
+ }
+
 }
 
 ?>

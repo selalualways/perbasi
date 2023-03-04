@@ -33,5 +33,12 @@ class Nama_klub extends CI_Controller {
 
 		$this->load->view('klub/Klub_list', $data);
 	}
+	public function hapus_klub($id_klub)
+	{
+	
+		$this->Klub_model->delete_klub($id_klub);
 
+		redirect(site_url('Nama_klub'));
+	
+    }
 }
