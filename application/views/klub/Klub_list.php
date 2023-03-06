@@ -12,7 +12,7 @@
     <td><?php echo $row->nama_klub; ?></td>
     <td><?php echo $row->pengurus; ?></td>
     <td>
-        <a href="<?php echo site_url('Nama_klub/hapus_klub/'. $row->id_klub) ?>"> Hapus</a>
+        <a href="<?php echo site_url('Klub/hapus_klub/'. $row->id_klub) ?>"> Hapus</a>
     </td>
  </tr>
  <?php } ?>

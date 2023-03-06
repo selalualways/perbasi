@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Nama_klub extends CI_Controller {
+class Klub extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -38,7 +38,7 @@ class Nama_klub extends CI_Controller {
 	
 		$this->Klub_model->delete_klub($id_klub);
 
-		redirect(site_url('Nama_klub'));
+		redirect(site_url('Klub'));
 	
     }
 }
