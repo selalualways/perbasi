@@ -1,4 +1,4 @@
-<table?>
+<table>
  <tr> 
     <td>id_klub</td>
     <td>nama_klub</td>
@@ -17,5 +17,4 @@
  </tr>
  <?php } ?>
 
- }
 </table>
