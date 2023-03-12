@@ -41,4 +41,37 @@ class Klub extends CI_Controller {
 		redirect(site_url('Klub'));
 	
     }
+	public function tambah_klub()
+	{
+		$data = array(
+			'action' => site_url('klub/proses_tambah_klub')
+		);
+		$this->load->view('klub/form_tambah_klub', $data);
+	}
+
+	public function _rules()
+	{
+		$this->form_validation->set_rules('nama_klub','Nama Klub','trim|required');
+		$this->form_validation->set_rules('pengurus','Nama Pengurus','trim|required');
+		$this->form_validation->set_rules('logo','Logo','trim|required');
+		$this->form_validation->set_rules('struktur_pengurus','Struktur Pengurus','trim|required');
+	}
+
+	public function proses_tambah_klub()
+	{
+		$this->_rules();
+		if($this->form_validation->run() == FALSE) {
+			$this->tambah_klub();
+		} else {
+			$data = array(
+			'nama_klub' => $this->input->post('nama_klub'),
+			'pengurus' => $this->input->post('pengurus'),
+			'logo' => $this->input->post('logo'),
+			'struktur_pengurus' => $this->input->post('struktur_pengurus'),
+			);
+
+			$this->Klub_model->insert($data);
+			redirect(site_url('Klub'));
+		}
+	}
 }

@@ -15,6 +15,10 @@ public function get_all_klub()
    $this->db->delete('klub'); 
  }
 
+ public function insert($data)
+{
+  $this->db->insert('Klub', $data);
+}
 }
 
 ?>
