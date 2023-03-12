@@ -1,4 +1,4 @@
-<table>
+<table border="1px">
  <tr> 
     <td>id_klub</td>
     <td>nama_klub</td>
@@ -18,3 +18,4 @@
  <?php } ?>
 
 </table>
+<a href="<?php echo site_url('klub/Tambah_klub') ?>"> Tambah </a>
