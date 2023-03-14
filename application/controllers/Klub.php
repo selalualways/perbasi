@@ -27,11 +27,15 @@ class Klub extends CI_Controller {
 	 public function index()
 	{
 		$data = array(
-		'data_klub' =>$this->Klub_model->get_all_klub(),
+			'menu_home' => '',
+			'menu_klub' => 'active',
+			'menu_pemain' => '',
+			'menu_berita' => '',
+			'data_klub' =>$this->Klub_model->get_all_klub(),
 
 		);
 
-		$this->load->view('klub/Klub_list', $data);
+		$this->template->load('template/template_admin', 'klub/klub_list', $data);
 	}
 	public function hapus_klub($id_klub)
 	{
@@ -44,9 +48,14 @@ class Klub extends CI_Controller {
 	public function tambah_klub()
 	{
 		$data = array(
+			'menu_home' => '',
+			'menu_klub' => 'active',
+			'menu_pemain' => '',
+			'menu_berita' => '',
 			'action' => site_url('klub/proses_tambah_klub')
 		);
-		$this->load->view('klub/form_tambah_klub', $data);
+		
+		$this->template->load('template/template_admin', 'klub/form_tambah_klub', $data);
 	}
 
 	public function _rules()
