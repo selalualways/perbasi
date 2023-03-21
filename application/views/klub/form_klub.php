@@ -10,7 +10,7 @@
                   <div class="header">
                         <div class="row clearfix">
                            <div class="col-xs-12 col-sm-6">
-                              <h2>TAMBAH KLUB</h2>
+                              <h2><?php echo $judul ?></h2>
                            </div>
                         </div>
                   </div>
@@ -23,7 +23,8 @@
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" name="id_klub" class="form-control" placeholder="Masukkan ID Klub">
+                                        <input type="text" name="id_klub" class="form-control" placeholder="Masukkan ID Klub"
+                                            value="<?php echo $id_klub ?>">
                                     </div>
                                 </div>
                             </div>
@@ -35,7 +36,8 @@
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" name="nama_klub" class="form-control" placeholder="Masukkan Nama Klub">
+                                        <input type="text" name="nama_klub" class="form-control" placeholder="Masukkan Nama Klub"
+                                        value="<?php echo $nama_klub ?>">
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +49,8 @@
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" name="pengurus" class="form-control" placeholder="Masukkan Nama Pengurus">
+                                        <input type="text" name="pengurus" class="form-control" placeholder="Masukkan Nama Pengurus"
+                                        value="<?php echo $pengurus ?>">
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +62,8 @@
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" name="logo" class="form-control" placeholder="Masukkan Logo">
+                                        <input type="text" name="logo" class="form-control" placeholder="Masukkan Logo"
+                                        value="<?php echo $logo ?>">
                                     </div>
                                 </div>
                             </div>
@@ -71,14 +75,16 @@
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" name="struktur_pengurus" class="form-control" placeholder="Masukkan Logo">
+                                        <input type="text" name="struktur_pengurus" class="form-control" placeholder="Masukkan Logo"
+                                        value="<?php echo $struktur_pengurus ?>">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                                <input type="submit" values="simpan" class="btn btn-primary">
+                                <a href="<?php echo site_url('Klub') ?>" class="btn btn-danger">Kembali</a>
+                                <input type="submit" value="Simpan" class="btn btn-primary">
                             </div>
                         </div>
 
