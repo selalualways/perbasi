@@ -36,6 +36,8 @@
                         <td><?php echo $row->logo; ?></td>
                         <td><?php echo $row->struktur_pengurus; ?></td>
                         <td>
+                           <a href="<?php echo site_url('Klub/ubah_klub/'. $row->id_klub) ?>" class="btn btn-sm btn-warning"> 
+                              <i class="material-icons">create</i> <span>Ubah</span></a>
                            <a href="<?php echo site_url('Klub/hapus_klub/'. $row->id_klub) ?>" class="btn btn-sm btn-danger"> 
                               <i class="material-icons">clear</i> <span>Hapus</span></a>
                         </td>

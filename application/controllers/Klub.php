@@ -52,10 +52,16 @@ class Klub extends CI_Controller {
 			'menu_klub' => 'active',
 			'menu_pemain' => '',
 			'menu_berita' => '',
-			'action' => site_url('klub/proses_tambah_klub')
+			'judul' => 'TAMBAH KLUB',
+			'action' => site_url('klub/proses_tambah_klub'),
+			'id_klub' => set_value('id_klub'),
+			'nama_klub' => set_value('nama_klub'),
+			'pengurus' => set_value('pengurus'),
+			'logo' => set_value('logo'),
+			'struktur_pengurus' => set_value('struktur_pengurus'),
 		);
 		
-		$this->template->load('template/template_admin', 'klub/form_tambah_klub', $data);
+		$this->template->load('template/template_admin', 'klub/form_klub', $data);
 	}
 
 	public function _rules()
@@ -80,6 +86,46 @@ class Klub extends CI_Controller {
 			);
 
 			$this->Klub_model->insert($data);
+			redirect(site_url('Klub'));
+		}
+	}
+
+	public function ubah_klub($id_klub)
+	{
+		$data_klub = $this->Klub_model->get_klub($id_klub);
+		$data = array(
+			'menu_home' => '',
+			'menu_klub' => 'active',
+			'menu_pemain' => '',
+			'menu_berita' => '',
+			'judul' => 'UBAH KLUB',
+			'action' => site_url('klub/proses_ubah_klub'),
+			'id_klub' => $data_klub->id_klub,
+			'nama_klub' => $data_klub->nama_klub,
+			'pengurus' => $data_klub->pengurus,
+			'logo' => $data_klub->logo,
+			'struktur_pengurus' => $data_klub->struktur_pengurus,
+		);
+		
+		$this->template->load('template/template_admin', 'klub/form_klub', $data);
+	}
+
+	public function proses_ubah_klub()
+	{
+		$this->_rules();
+		if($this->form_validation->run() == FALSE) {
+			$id_klub = $this->input->post('id_klub');
+			$this->ubah_klub($id_klub);
+		} else {
+			$id_klub = $this->input->post('id_klub');
+			$data = array(
+				'nama_klub' => $this->input->post('nama_klub'),
+				'pengurus' => $this->input->post('pengurus'),
+				'logo' => $this->input->post('logo'),
+				'struktur_pengurus' => $this->input->post('struktur_pengurus'),
+			);
+
+			$this->Klub_model->update($id_klub, $data);
 			redirect(site_url('Klub'));
 		}
 	}
