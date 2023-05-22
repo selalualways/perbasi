@@ -6,7 +6,7 @@
    <!-- Mobile Metas -->
    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
    <!-- Site Metas -->
-   <title>Game Info</title>
+   <title>PERBASI</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -47,7 +47,7 @@
                      <div class="col-md-6">
                         <div class="full">
                            <div class="logo">
-                              <a href="index.html"><img src="sports-master/images/logo.png" alt="#" /></a>
+                              <a href="index.html"><img src="sports-master/images/logoperbasi.png" alt="#" height="120" width="120" /></a>
                            </div>
                         </div>
                      </div>
@@ -55,10 +55,10 @@
                         <div class="right_top_section">
                            <!-- social icon -->
                            <ul class="social-icons pull-left">
-                              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                              <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
-                              <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                              <li><a class="facebook" href="https://www.facebook.com/perbasi.banjarmasin"><i class="fa fa-facebook"></i></a></li>
+                              <li><a class="twitter" href="https://twitter.com/perbasibjm"><i class="fa fa-twitter"></i></a></li>
+                              <li><a class="youtube" href="https://www.youtube.com/@perbasikalimantanselatan/featured"><i class="fa fa-youtube-play"></i></a></li>
+                              <li><a class="instagram" href="https://www.instagram.com/perbasi.bjm/"><i class="fa fa-instagram"></i></a></li>
                            </ul>
                            <!-- end social icon -->
                            <!-- button section -->
