@@ -55,10 +55,10 @@
                         <div class="right_top_section">
                            <!-- social icon -->
                            <ul class="social-icons pull-left">
-                              <li><a class="facebook" href="https://www.facebook.com/perbasi.banjarmasin"><i class="fa fa-facebook"></i></a></li>
-                              <li><a class="twitter" href="https://twitter.com/perbasibjm"><i class="fa fa-twitter"></i></a></li>
-                              <li><a class="youtube" href="https://www.youtube.com/@perbasikalimantanselatan/featured"><i class="fa fa-youtube-play"></i></a></li>
-                              <li><a class="instagram" href="https://www.instagram.com/perbasi.bjm/"><i class="fa fa-instagram"></i></a></li>
+                              <li><a class="facebook" href="https://www.facebook.com/perbasi.banjarmasin" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                              <li><a class="twitter" href="https://twitter.com/perbasibjm"><i class="fa fa-twitter" target="_blank"></i></a></li>
+                              <li><a class="youtube" href="https://www.youtube.com/@perbasikalimantanselatan/featured" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                              <li><a class="instagram" href="https://www.instagram.com/perbasi.bjm/" target="_blank"><i class="fa fa-instagram"></i></a></li>
                            </ul>
                            <!-- end social icon -->
                            <!-- button section -->
