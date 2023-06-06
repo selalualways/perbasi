@@ -30,6 +30,7 @@ class Klub extends CI_Controller {
 			'menu_home' => '',
 			'menu_klub' => 'active',
 			'menu_pemain' => '',
+			'menu_pelatih' => '',
 			'menu_berita' => '',
 			'data_klub' =>$this->Klub_model->get_all_klub(),
 
@@ -51,6 +52,7 @@ class Klub extends CI_Controller {
 			'menu_home' => '',
 			'menu_klub' => 'active',
 			'menu_pemain' => '',
+			'menu_pelatih' => '',
 			'menu_berita' => '',
 			'judul' => 'TAMBAH KLUB',
 			'action' => site_url('klub/proses_tambah_klub'),
@@ -97,6 +99,7 @@ class Klub extends CI_Controller {
 			'menu_home' => '',
 			'menu_klub' => 'active',
 			'menu_pemain' => '',
+			'menu_pelatih' => '',
 			'menu_berita' => '',
 			'judul' => 'UBAH KLUB',
 			'action' => site_url('klub/proses_ubah_klub'),

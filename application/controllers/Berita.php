@@ -30,6 +30,7 @@ class Berita extends CI_Controller {
 			'menu_home' => '',
 			'menu_klub' => '',
 			'menu_pemain' => '',
+			'menu_pelatih' => '',
 			'menu_berita' => 'active',
 			'data_berita' =>$this->Berita_model->get_all_berita(),
 
@@ -51,6 +52,7 @@ class Berita extends CI_Controller {
 			'menu_home' => '',
 			'menu_klub' => '',
 			'menu_pemain' => '',
+			'menu_pelatih' => '',
 			'menu_berita' => 'active',
 			'judul' => 'TAMBAH BERITA',
 			'action' => site_url('berita/proses_tambah_berita'),
@@ -97,6 +99,7 @@ class Berita extends CI_Controller {
 			'menu_home' => '',
 			'menu_klub' => '',
 			'menu_pemain' => '',
+			'menu_pelatih' => '',
 			'menu_berita' => 'active',
 			'judul' => 'UBAH BERITA',
 			'action' => site_url('berita/proses_ubah_berita'),
