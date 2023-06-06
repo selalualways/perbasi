@@ -40,6 +40,9 @@
 
     <!-- Demo Js -->
     <script src="<?php echo base_url('AdminBSB')?>/js/demo.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="<?php echo base_url('AdminBSB')?>/plugins/bootstrap-select/js/bootstrap-select.js"></script>
 </body>
 
 </html>

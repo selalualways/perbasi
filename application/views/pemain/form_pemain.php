@@ -51,7 +51,7 @@
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                 <div class="form-group">
                                     
-                                        <select class="form-control" name="id_klub">
+                                        <select class="form-control show-tick" name="id_klub">
                                         <?php
 
                                         foreach($data_klub as $klub){ ?>
@@ -59,7 +59,7 @@
                                                 <?php echo $klub->nama_klub ?>
                                             </option>
                                         <?php } ?>
-                                    </select>    
+                                    </select>   
                                         
                                 </div>
                             </div>

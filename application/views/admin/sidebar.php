@@ -43,10 +43,9 @@
                             <span>Pemain</span>
                         </a>
                     </li>
-
                     <li class="<?php echo $menu_pelatih ?>">
                         <a href="<?php echo site_url('Pelatih') ?>">
-                            <i class="material-icons">dirrection_run</i>
+                            <i class="material-icons">directions_run</i>
                             <span>Pelatih</span>
                         </a>
                     </li>
