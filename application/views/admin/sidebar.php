@@ -8,7 +8,7 @@
                 </div>
                 <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</div>
-                    <div class="email">EMAIL DARI ADMIN PERBASI NANTI</div>
+                    <div class="email">perbasibjm@gmail.com</div>
                     <div class="btn-group user-helper-dropdown">
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
@@ -20,6 +20,7 @@
                 </div>
             </div>
             <!-- #User Info -->
+            
             <!-- Menu -->
             <div class="menu">
                 <ul class="list">
@@ -42,6 +43,14 @@
                             <span>Pemain</span>
                         </a>
                     </li>
+
+                    <li class="<?php echo $menu_pelatih ?>">
+                        <a href="<?php echo site_url('Pelatih') ?>">
+                            <i class="material-icons">dirrection_run</i>
+                            <span>Pelatih</span>
+                        </a>
+                    </li>
+                    
                     <li class="<?php echo $menu_berita ?>">
                         <a href="<?php echo site_url('Berita') ?>">
                             <i class="material-icons">assignment</i>

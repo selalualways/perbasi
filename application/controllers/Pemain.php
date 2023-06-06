@@ -31,6 +31,7 @@ class Pemain extends CI_Controller {
 			'menu_home' => '',
 			'menu_klub' => '',
 			'menu_pemain' => 'active',
+			'menu_pelatih' => '',
 			'menu_berita' => '',
 			'data_pemain' =>$this->Pemain_model->get_all_pemain(),
 
@@ -52,6 +53,7 @@ class Pemain extends CI_Controller {
 			'menu_home' => '',
 			'menu_klub' => '',
 			'menu_pemain' => 'active',
+			'menu_pelatih' => '',
 			'menu_berita' => '',
 			'judul' => 'TAMBAH Pemain',
 			'action' => site_url('pemain/proses_tambah_pemain'),
@@ -110,6 +112,7 @@ class Pemain extends CI_Controller {
 			'menu_home' => '',
 			'menu_klub' => '',
 			'menu_pemain' => 'active',
+			'menu_pelatih' => '',
 			'menu_berita' => '',
 			'judul' => 'UBAH PEMAIN',
 			'action' => site_url('pemain/proses_ubah_pemain'),
