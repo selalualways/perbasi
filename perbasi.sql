@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `login` (
 -- Dumping structure for table db_perbasi.pelatih
 DROP TABLE IF EXISTS `pelatih`;
 CREATE TABLE IF NOT EXISTS `pelatih` (
-  `nik` int(11) NOT NULL,
+  `nik` varchar(50) NOT NULL DEFAULT '',
   `nama_pelatih` varchar(50) DEFAULT NULL,
   `lisensi` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`nik`) USING BTREE
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `pelatih` (
 -- Dumping structure for table db_perbasi.pemain
 DROP TABLE IF EXISTS `pemain`;
 CREATE TABLE IF NOT EXISTS `pemain` (
-  `nik` int(11) NOT NULL,
+  `nik` varchar(50) NOT NULL DEFAULT '',
   `nama_pemain` varchar(50) DEFAULT NULL,
   `id_klub` int(11) DEFAULT NULL,
   `tempat_lahir` varchar(50) DEFAULT NULL,
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `pemain` (
 -- Dumping structure for table db_perbasi.wasit
 DROP TABLE IF EXISTS `wasit`;
 CREATE TABLE IF NOT EXISTS `wasit` (
-  `nik` int(11) NOT NULL,
+  `nik` varchar(50) NOT NULL DEFAULT '',
   `nama_wasit` varchar(50) DEFAULT NULL,
   `lisensi` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`nik`) USING BTREE
