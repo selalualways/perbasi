@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pelatih extends CI_Controller {
+class Wasit extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -21,7 +21,7 @@ class Pelatih extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-    	$this->load->model('Pelatih_model');
+    	$this->load->model('Wasit_model');
 	}
 	
 	 public function index()
@@ -30,102 +30,102 @@ class Pelatih extends CI_Controller {
 			'menu_home' => '',
 			'menu_klub' => '',
 			'menu_pemain' => '',
-            'menu_pelatih' => 'active',
-			'menu_wasit' => '',
+            'menu_pelatih' => '',
+            'menu_wasit' => 'active',
 			'menu_berita' => '',
-			'data_pelatih' =>$this->Pelatih_model->get_all_pelatih(),
+			'data_wasit' =>$this->Wasit_model->get_all_wasit(),
 
 		);
 
-		$this->template->load('template/template_admin', 'pelatih/pelatih_list', $data);
+		$this->template->load('template/template_admin', 'wasit/wasit_list', $data);
 	}
-	public function hapus_pelatih($nik)
+	public function hapus_wasit($nik)
 	{
 	
-		$this->Pelatih_model->delete_pelatih($nik);
+		$this->Wasit_model->delete_wasit($nik);
 
-		redirect(site_url('Pelatih'));
+		redirect(site_url('Wasit'));
 	
     }
-	public function tambah_pelatih()
+	public function tambah_wasit()
 	{
 		$data = array(
 			'menu_home' => '',
 			'menu_klub' => '',
 			'menu_pemain' => '',
-            'menu_pelatih' => 'active',
-			'menu_wasit' => '',
+            'menu_pelatih' => '',
+            'menu_wasit' => 'active',
 			'menu_berita' => '',
-			'judul' => 'TAMBAH PELATIH',
-			'action' => site_url('pelatih/proses_tambah_pelatih'),
+			'judul' => 'TAMBAH WASIT',
+			'action' => site_url('wasit/proses_tambah_wasit'),
 			'nik' => set_value('nik'),
-			'nama_pelatih' => set_value('nama_pelatih'),
+			'nama_wasit' => set_value('nama_wasit'),
 			'lisensi' => set_value('lisensi'),
 		);
 		
-		$this->template->load('template/template_admin', 'pelatih/form_pelatih', $data);
+		$this->template->load('template/template_admin', 'wasit/form_wasit', $data);
 	}
 
 	public function _rules()
 	{
 		$this->form_validation->set_rules('nik','NIK','trim|required');
-		$this->form_validation->set_rules('nama_pelatih','Nama Pelatih','trim|required');
+		$this->form_validation->set_rules('nama_wasit','Nama Wasit','trim|required');
 		$this->form_validation->set_rules('lisensi','Lisensi','trim|required');
 	}
 
-	public function proses_tambah_pelatih()
+	public function proses_tambah_wasit()
 	{
 		$this->_rules();
 		if($this->form_validation->run() == FALSE) {
-			$this->tambah_pelatih();
+			$this->tambah_wasit();
 		} else {
 			$data = array(
 			'nik' => $this->input->post('nik'),
-			'nama_pelatih' => $this->input->post('nama_pelatih'),
+			'nama_wasit' => $this->input->post('nama_wasit'),
 			'lisensi' => $this->input->post('lisensi'),
 			);
 
-			$this->Pelatih_model->insert($data);
-			redirect(site_url('Pelatih'));
+			$this->Wasit_model->insert($data);
+			redirect(site_url('Wasit'));
 		}
 	}
 
-	public function ubah_pelatih($nik)
+	public function ubah_wasit($nik)
 	{
-		$data_pelatih = $this->Pelatih_model->get_pelatih($nik);
+		$data_wasit = $this->Wasit_model->get_wasit($nik);
 		$data = array(
 			'menu_home' => '',
 			'menu_klub' => '',
 			'menu_pemain' => '',
-            'menu_pelatih' => 'active',
-			'menu_wasit' => '',
+            'menu_pelatih' => '',
+            'menu_wasit' => 'active',
 			'menu_berita' => '',
-			'judul' => 'UBAH PELATIH',
-			'action' => site_url('pelatih/proses_ubah_pelatih'),
-			'nik' => $data_pelatih->nik,
-			'nama_pelatih' => $data_pelatih->nama_pelatih,
-			'lisensi' => $data_pelatih->lisensi,
+			'judul' => 'UBAH WASIT',
+			'action' => site_url('wasit/proses_ubah_wasit'),
+			'nik' => $data_wasit->nik,
+			'nama_wasit' => $data_wasit->nama_wasit,
+			'lisensi' => $data_wasit->lisensi,
 		);
 		
-		$this->template->load('template/template_admin', 'pelatih/form_pelatih', $data);
+		$this->template->load('template/template_admin', 'wasit/form_wasit', $data);
 	}
 
-	public function proses_ubah_pelatih()
+	public function proses_ubah_wasit()
 	{
 		$this->_rules();
 		if($this->form_validation->run() == FALSE) {
 			$nik = $this->input->post('nik');
-			$this->ubah_pelatih($nik);
+			$this->ubah_wasit($nik);
 		} else {
 			$nik = $this->input->post('nik');
 			$data = array(
 				'nik' => $this->input->post('nik'),
-				'nama_pelatih' => $this->input->post('nama_pelatih'),
+				'nama_wasit' => $this->input->post('nama_wasit'),
 				'lisensi' => $this->input->post('lisensi'),
 			);
 
-			$this->Pelatih_model->update($nik, $data);
-			redirect(site_url('Pelatih'));
+			$this->Wasit_model->update($nik, $data);
+			redirect(site_url('Wasit'));
 		}
 	}
 }
