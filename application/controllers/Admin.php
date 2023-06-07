@@ -25,6 +25,7 @@ class Admin extends CI_Controller {
 			'menu_klub' => '',
 			'menu_pemain' => '',
 			'menu_pelatih' => '',
+			'menu_wasit' => '',
 			'menu_berita' => '',
 		);
 
