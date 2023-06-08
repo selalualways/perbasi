@@ -55,9 +55,7 @@
                         <div class="right_top_section">
                            <!-- social icon -->
                            <ul class="social-icons pull-left">
-                              <li><a class="facebook" href="https://www.facebook.com/perbasi.banjarmasin" target="_blank"><i class="fa fa-facebook"></i></a></li>
                               <li><a class="twitter" href="https://twitter.com/perbasibjm"><i class="fa fa-twitter" target="_blank"></i></a></li>
-                              <li><a class="youtube" href="https://www.youtube.com/@perbasikalimantanselatan/featured" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
                               <li><a class="instagram" href="https://www.instagram.com/perbasi.bjm/" target="_blank"><i class="fa fa-instagram"></i></a></li>
                            </ul>
                            <!-- end social icon -->
@@ -91,11 +89,9 @@
                                     <div class="collapse navbar-collapse js-navbar-collapse">
                                        <ul class="nav navbar-nav">
                                           <li class="active"><a href="index.html">Home</a></li>
-                                          <li><a href="about.html">About</a></li>
-                                          <li><a href="team.html">Team</a></li>
-                                          <li><a href="news.html">News</a></li>
+                                          <li><a href="news.html">Berita</a></li>
                                           <li class="dropdown mega-dropdown">
-                                             <a href="match" class="dropdown-toggle" data-toggle="dropdown">Match<span class="caret"></span></a>				
+                                             <a href="match" class="dropdown-toggle" data-toggle="dropdown">Klub<span class="caret"></span></a>				
                                              <ul class="dropdown-menu mega-dropdown-menu">
                                                 <li class="col-sm-8">
                                                    <ul>
@@ -145,7 +141,7 @@
                                              </ul>
                                           </li>
                                           <li><a href="blog.html">Blog</a></li>
-                                          <li><a href="contact.html">contact</a></li>
+                                          <li><a href="about.html">Tentang</a></li>
                                        </ul>
                                     </div>
                                     <!-- /.nav-collapse -->

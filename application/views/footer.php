@@ -5,13 +5,11 @@
                   <div class="full">
                      <div class="footer-widget">
                         <div class="footer-logo">
-                           <a href="#"><img src="sports-master/images/footer-logo.png" alt="#" /></a>
+                           <a href="#"><img src="sports-master/images/logoperbasi.png" alt="#" /></a>
                         </div>
                         <p>Most of our events have hard and easy route choices as we are always keen to encourage new riders.</p>
                         <ul class="social-icons style-4 pull-left">
-                           <li><a class="facebook" href="https://www.facebook.com/perbasi.banjarmasin"><i class="fa fa-facebook"></i></a></li>
                            <li><a class="twitter" href="https://twitter.com/perbasibjm"><i class="fa fa-twitter"></i></a></li>
-                           <li><a class="youtube" href="https://www.youtube.com/@perbasikalimantanselatan/featured"><i class="fa fa-youtube-play"></i></a></li>
                            <li><a class="instagram" href="https://www.instagram.com/perbasi.bjm/"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                      </div>
@@ -24,8 +22,6 @@
                         <ul class="footer-menu">
                            <li><a href="about.html">About Us</a></li>
                            <li><a href="team.html">Our Team</a></li>
-                           <li><a href="news.html">Latest News</a></li>
-                           <li><a href="matche.html">Recent Matchs</a></li>
                            <li><a href="blog.html">Our Blog</a></li>
                            <li><a href="contact.html">Contact Us</a></li>
                         </ul>
@@ -37,9 +33,9 @@
                      <div class="footer-widget">
                         <h3>Contact us</h3>
                         <ul class="address-list">
-                           <li><i class="fa fa-map-marker"></i> Lorem Ipsum is simply dummy text of the printing..</li>
+                           <li><i class="fa fa-map-marker"></i> Jl. Gerilya, Graha Mahatama, Blok Jambu Air No.5 Banjarmasin, Kalimantan Selatan</li>
                            <li><i class="fa fa-phone"></i> 123 456 7890</li>
-                           <li><i style="font-size:20px;top:5px;" class="fa fa-envelope"></i> demo@gmail.com</li>
+                           <li><i style="font-size:20px;top:5px;" class="fa fa-envelope"></i> perbasibjm@gmail.com</li>
                         </ul>
                      </div>
                   </div>
