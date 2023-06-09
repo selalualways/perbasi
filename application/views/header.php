@@ -180,9 +180,9 @@
                         <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"></div>
                         <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                            <div class="slider-contant" data-animation="animated fadeInRight">
-                              <h3>If you Don’t Practice<br>You <span class="color-yellow">Don’t Derserve</span><br>to win!</h3>
-                              <p>If you use this site regularly and would like to help keep the site on the Internet,<br>
-                                 please consider donating a small sum to help pay..
+                              <h3>Don’t Panic<br> <span class="color-yellow"> Clint</span><br>is on the way</h3>
+                              <p>Listen to your serrif boy!<br>
+                              I’ve got bullet with your name on it..
                               </p>
                               <button class="btn btn-primary btn-lg">Read More</button>
                            </div>

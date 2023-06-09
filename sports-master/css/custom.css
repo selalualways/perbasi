@@ -18,13 +18,13 @@
      padding: 10px 15px;
 }
  .skyblue {
-     background-image:url('../images/main-slider-img1.jpg');
+     background-image:url('../images/bg3.jpeg');
 }
  .darkerskyblue {
-     background-image:url('../images/bg1.png');
+     background-image:url('../images/bg4.jpeg');
 }
  .deepskyblue {
-     background-image:url('../images/bg1.png');
+     background-image:url('../images/bg2.jpg');
 }
  .carousel-indicators {
      bottom: 0;
@@ -1177,7 +1177,7 @@ section#contant h4 {
  .theme-padding.middle-bg {
      padding-top: 100px;
      padding-bottom: 100px;
-     background-image: url(../images/sport-mate.png);
+     background-image: url(../images/bg-perbasi.jpg);
      background-repeat: no-repeat;
      background-position: top center;
      position: relative;
