@@ -31,6 +31,15 @@ class Pemain_model extends CI_Model
       $this->db->where('nik', $nik);
       $this->db->update('pemain', $data); 
     }
+
+    public function inqlastid()
+	{   
+       $query = $this->db->query('SELECT LAST_INSERT_ID() as lastid');
+        
+       $res = $query->row();
+       return $res;
+
+	}
 }
 
 ?>

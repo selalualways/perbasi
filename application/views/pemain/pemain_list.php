@@ -29,6 +29,7 @@
                         <th>Tinggi Badan</th>
                         <th>Berat Badan</th>
                         <th>Foto Pemain</th>
+                        <th>Aksi</th>
                      </tr>
                      <?php foreach($data_pemain as $row) { ?>
                      <tr>
@@ -39,7 +40,11 @@
                         <td><?php echo $row->tanggal_lahir; ?></td>
                         <td><?php echo $row->tinggi_badan; ?></td>
                         <td><?php echo $row->berat_badan; ?></td>
-                        <td><?php echo $row->foto_pemain; ?></td>
+                        <td>
+                           <?php if ($row->foto_pemain != NULL || $row->foto_pemain != "") { ?>
+                              <img src="<?php echo base_url('uploads/fotopemain/'.$row->foto_pemain); ?>" style="height: 90px;border: 1px solid black;" />
+                           <?php } ?>
+                        </td>
                         <td>
                            <a href="<?php echo site_url('Pemain/ubah_pemain/'. $row->nik) ?>" class="btn btn-sm btn-warning"> 
                               <i class="material-icons">create</i> <span>Ubah</span></a>

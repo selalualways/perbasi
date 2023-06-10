@@ -15,7 +15,7 @@
                         </div>
                   </div>
                   <div class="body">
-                    <?php echo form_open($action, 'class="form-horizontal"') ?>
+                    <?php echo form_open($action, 'class="form-horizontal" enctype="multipart/form-data"') ?>
                         <div class="row clearfix">
                             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                 <label for="nik">NIK</label>
@@ -129,8 +129,7 @@
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" name="foto_pemain" class="form-control" placeholder="Masukkan Foto Pemain"
-                                        value="<?php echo $foto_pemain ?>">
+                                        <input type="file" name="foto_pemain" class="form-control" value="<?php echo $foto_pemain ?>">
                                     </div>
                                 </div>
                             </div>

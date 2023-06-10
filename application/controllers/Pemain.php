@@ -82,7 +82,6 @@ class Pemain extends CI_Controller {
         $this->form_validation->set_rules('tanggal_lahir','Tanggal Lahir','trim|required');
         $this->form_validation->set_rules('tinggi_badan','Tinggi Badan','trim|required');
         $this->form_validation->set_rules('berat_badan','Berat Badan','trim|required');
-        $this->form_validation->set_rules('foto_pemain','foto_pemain','trim|required');
 	}
 
 	public function proses_tambah_pemain()
@@ -99,10 +98,47 @@ class Pemain extends CI_Controller {
 			'tanggal_lahir' => $this->input->post('tanggal_lahir'),
             'tinggi_badan' => $this->input->post('tinggi_badan'),
             'berat_badan' => $this->input->post('berat_badan'),
-            'foto_pemain' => $this->input->post('foto_pemain'),
 			);
 
 			$this->Pemain_model->insert($data);
+
+			$nik = $this->input->post('nik');
+
+			// setting konfigurasi upload
+			$config['upload_path'] = './uploads/fotopemain/';
+			$config['allowed_types'] = 'jpg|jpeg|png';
+			$config['overwrite'] = true;
+			$filename = 'FotoPemain-'.$nik;
+			$config['file_name'] = $filename;
+	
+			// load library upload
+			$this->load->library('upload', $config);
+	
+			$this->upload->initialize($config);
+			
+			if($_FILES['foto_pemain']['name'])
+			{
+				if ($this->upload->do_upload('foto_pemain'))
+				{
+					$uploadfotopemain = $this->upload->data();
+					$data = array(
+					  'namafile' =>$uploadfotopemain['file_name'],
+					  'type' =>$uploadfotopemain['file_type']
+					  
+					);
+					$fotopemain = $data['namafile'];
+
+					$nik = $this->input->post('nik');
+	
+					$data = array(
+						'foto_pemain' => $fotopemain,
+					);
+		
+					$this->Pemain_model->update($nik, $data);
+				}
+	
+			}
+
 			redirect(site_url('Pemain'));
 		}
 	}
