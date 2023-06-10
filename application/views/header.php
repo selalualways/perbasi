@@ -32,6 +32,7 @@
    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
    <script src="sports-master/js/3dslider.js"></script>
+  
    </head>
    <body class="game_info" data-spy="scroll" data-target=".header">
       <!-- LOADER -->
@@ -128,7 +129,7 @@
                                                 <li class="col-sm-4">
                                                    <ul class="menu-inner">
                                                       <li class="dropdown-header">Next Matchs</li>
-                                                      <li><a href="#">Contrary vs classical</a></li>
+                                                      <li><a href="#">Sunday Morning vs Boston Celtics</a></li>
                                                       <li><a href="#">Discovered vs undoubtable</a></li>
                                                       <li><a href="#">Contrary vs classical</a></li>
                                                       <li><a href="#">Discovered vs undoubtable</a></li>
@@ -181,8 +182,8 @@
                         <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                            <div class="slider-contant" data-animation="animated fadeInRight">
                               <h3>Don’t Panic<br> <span class="color-yellow"> Clint</span><br>is on the way</h3>
-                              <p>Listen to your serrif boy!<br>
-                              I’ve got bullet with your name on it..
+                              <p>Waja sampai kaputing<br>
+                              Anjay gurinjay
                               </p>
                               <button class="btn btn-primary btn-lg">Read More</button>
                            </div>
@@ -237,7 +238,7 @@
                      <p class="headline"><i class="fa fa-star" aria-hidden="true"></i> Top Headlines :</p>
                      <!--made by vipul mirajkar thevipulm.appspot.com-->
                      <h1>
-                     <a href="" class="typewrite" data-period="2000" data-type='[ "Contrary to popular belief, Lorem Ipsum is not simply random text.", "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."]'>
+                     <a href="" class="typewrite" data-period="2000" data-type='["Clint hero debes.", "Oyaji Whiteman top 1 retri indonesia."]'>
                      <span class="wrap"></span>
                      </a>
                      </h1	   

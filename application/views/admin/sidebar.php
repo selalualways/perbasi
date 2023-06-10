@@ -45,13 +45,13 @@
                     </li>
                     <li class="<?php echo $menu_pelatih ?>">
                         <a href="<?php echo site_url('Pelatih') ?>">
-                            <i class="material-icons">directions_run</i>
+                            <i class="material-icons">sports</i>
                             <span>Pelatih</span>
                         </a>
                     </li>
                     <li class="<?php echo $menu_wasit ?>">
                         <a href="<?php echo site_url('Wasit') ?>">
-                            <i class="material-icons">directions_run</i>
+                            <i class="material-icons">flag</i>
                             <span>Wasit</span>
                         </a>
                     </li>
