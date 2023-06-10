@@ -39,6 +39,9 @@ class Berita extends CI_Controller {
 
 		$this->template->load('template/template_admin', 'berita/berita_list', $data);
 	}
+
+	
+
 	public function hapus_berita($id_berita)
 	{
 	
@@ -78,15 +81,39 @@ class Berita extends CI_Controller {
 
 	public function proses_tambah_berita()
 	{
+		function slugify($txt) {
+			// replace non letter or digits by -
+			$txt = preg_replace('~[^\pL\d]+~u', '-', $txt);
+		   
+			// transliterate
+			$txt = iconv('utf-8', 'us-ascii//TRANSLIT', $txt);
+		   
+			// remove unwanted characters
+			$txt = preg_replace('~[^-\w]+~', '', $txt);
+		   
+			// trim
+			$txt = trim($txt, '-');
+		   
+			// remove duplicate -
+			$txt = preg_replace('~-+~', '-', $txt);
+		   
+			// lowercase
+			$isi = strtolower($txt);
+			 
+		  return $isi;
+		  }
+		  
 		$this->_rules();
 		if($this->form_validation->run() == FALSE) {
 			$this->tambah_berita();
 		} else {
+			$isi_slug = $this->input->post('judul');
 			$data = array(
 			'tanggal' => $this->input->post('tanggal'),
 			'judul' => $this->input->post('judul'),
 			'foto' => $this->input->post('foto'),
 			'isi' => $this->input->post('isi'),
+			'slug' => slugify($isi_slug),
 			);
 
 			$this->Berita_model->insert($data);
@@ -134,5 +161,9 @@ class Berita extends CI_Controller {
 			$this->Berita_model->update($id_berita, $data);
 			redirect(site_url('Berita'));
 		}
+
+		
+		
 	}
+	
 }

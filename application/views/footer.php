@@ -20,10 +20,10 @@
                      <div class="footer-widget">
                         <h3>Menu</h3>
                         <ul class="footer-menu">
-                           <li><a href="about.html">About Us</a></li>
+                           <li><a href="about.html">Tentang Kami</a></li>
                            <li><a href="team.html">Our Team</a></li>
                            <li><a href="blog.html">Our Blog</a></li>
-                           <li><a href="contact.html">Contact Us</a></li>
+                           <li><a href="contact.html">Contact</a></li>
                         </ul>
                      </div>
                   </div>
@@ -51,7 +51,7 @@
          </div>
          <div class="footer-bottom">
             <div class="container">
-               <p>Copyright © 2018 Distributed by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a></p>
+               <p>Copyright © 2023 PERBASI BANJARMASIN, All Right Reserved</p>
             </div>
          </div>
       </footer>
@@ -60,5 +60,25 @@
       <script src="sports-master/js/all.js"></script>
       <!-- ALL PLUGINS -->
       <script src="sports-master/js/custom.js"></script>
+      <!-- Jquery DataTable Plugin Js -->
+    <script src="../../plugins/jquery-datatable/jquery.dataTables.js"></script>
+    <script src="../../plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
+    <script src="../../plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
+    <script src="../../plugins/jquery-datatable/extensions/export/jszip.min.js"></script>
+    <script src="../../plugins/jquery-datatable/extensions/export/pdfmake.min.js"></script>
+    <script src="../../plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
+    <script src="../../plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
+    <script src="../../plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
+
+    <script type="text-javascript">
+    $(document).ready(function() {
+      $("#tabel_klub").DataTable({
+         responsive: true,
+         lengthChange: false,
+         autoWidth: false,
+      });
+   });
+      </script>
    </body>
 </html>

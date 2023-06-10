@@ -19,7 +19,7 @@
                         </div>
                   </div>
                   <div class="body">
-                  <table class="table">
+                  <table class="table js-basic-example dataTable">
                      <tr> 
                         <th>ID Klub</th>
                         <th>Nama Klub</th>

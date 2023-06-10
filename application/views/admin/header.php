@@ -33,6 +33,9 @@
 
      <!-- Bootstrap Select Css -->
      <link href="<?php echo base_url('AdminBSB')?>/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+
+      <!-- JQuery DataTable Css -->
+   <link href="<?php echo base_url('AdminBSB')?>/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
 </head>
 
 <body class="theme-green">
