@@ -163,6 +163,7 @@ class Pemain extends CI_Controller {
             'tinggi_badan' => $data_pemain->tinggi_badan,
             'berat_badan' => $data_pemain->berat_badan,
             'foto_pemain' => $data_pemain->foto_pemain,
+			'data_klub' => $this->Klub_model->get_all_klub(),
 		);
 		
 		$this->template->load('template/template_admin', 'pemain/form_pemain', $data);
