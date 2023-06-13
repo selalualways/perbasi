@@ -111,6 +111,7 @@ class Klub extends CI_Controller {
 			'pengurus' => $data_klub->pengurus,
 			'logo' => $data_klub->logo,
 			'struktur_pengurus' => $data_klub->struktur_pengurus,
+			
 		);
 		
 		$this->template->load('template/template_admin', 'klub/form_klub', $data);

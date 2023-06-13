@@ -6,7 +6,11 @@ class Pemain_model extends CI_Model
 {
     public function get_all_pemain()
     {
-      return $this->db->get('pemain')->result(); 
+      $this->db->select('*');
+      $this->db->from('pemain');
+      $this->db->join('klub','klub.id_klub = pemain.id_klub');
+
+      return $this->db->get()->result();
     }
 
     public function get_pemain($nik)

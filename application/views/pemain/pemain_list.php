@@ -35,7 +35,7 @@
                      <tr>
                         <td><?php echo $row->nik; ?></td>
                         <td><?php echo $row->nama_pemain; ?></td>
-                        <td><?php echo $row->id_klub; ?></td>
+                        <td><?php echo $row->nama_klub; ?></td>
                         <td><?php echo $row->tempat_lahir; ?></td>
                         <td><?php echo $row->tanggal_lahir; ?></td>
                         <td><?php echo $row->tinggi_badan; ?></td>
