@@ -67,8 +67,7 @@
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" name="foto" class="form-control" placeholder="Masukkan Foto Berita"
-                                        value="<?php echo $foto ?>">
+                                    <input type="file" name="foto" class="form-control" value="<?php echo $foto ?>">
                                     </div>
                                 </div>
                             </div>
