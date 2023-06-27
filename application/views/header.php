@@ -141,7 +141,7 @@
                                                 </li>
                                              </ul>
                                           </li>
-                                          <li><a href="blog.html">Blog</a></li>
+                                       
                                           <li><a href="about.html">Tentang</a></li>
                                        </ul>
                                     </div>

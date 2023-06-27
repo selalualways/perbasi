@@ -50,17 +50,14 @@
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                 <div class="form-group">
-                                    
-                                        <select class="form-control show-tick" name="id_klub">
+                                    <select class="form-control show-tick" name="id_klub">
                                         <?php
-
                                         foreach($data_klub as $klub){ ?>
                                             <option value='<?php echo $klub->id_klub ?>' <?php if($klub->id_klub == $id_klub) { echo "selected"; } ?>>
                                                 <?php echo $klub->nama_klub ?>
                                             </option>
                                         <?php } ?>
                                     </select>   
-                                        
                                 </div>
                             </div>
                         </div>
