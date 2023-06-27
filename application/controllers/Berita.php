@@ -111,12 +111,47 @@ class Berita extends CI_Controller {
 			$data = array(
 			'tanggal' => $this->input->post('tanggal'),
 			'judul' => $this->input->post('judul'),
-			'foto' => $this->input->post('foto'),
 			'isi' => $this->input->post('isi'),
 			'slug' => slugify($isi_slug),
 			);
 
 			$this->Berita_model->insert($data);
+			$id_berita = $this->input->post('id_berita');
+
+			// setting konfigurasi upload
+			$config['upload_path'] = './uploads/fotoberita/';
+			$config['allowed_types'] = 'jpg|jpeg|png';
+			$config['overwrite'] = true;
+			$filename = 'FotoBerita-'.$id_berita;
+			$config['file_name'] = $filename;
+	
+			// load library upload
+			$this->load->library('upload', $config);
+	
+			$this->upload->initialize($config);
+			
+			if($_FILES['foto']['name'])
+			{
+				if ($this->upload->do_upload('foto'))
+				{
+					$uploadfotoberita = $this->upload->data();
+					$data = array(
+					  'namafile' =>$uploadfotoberita['file_name'],
+					  'type' =>$uploadfotoberita['file_type']
+					  
+					);
+					$fotoberita = $data['namafile'];
+
+					$id_berita = $this->input->post('id_berita');
+	
+					$data = array(
+						'foto' => $fotoberita,
+					);
+		
+					$this->Berita_model->update($id_berita, $data);
+				}
+	
+			}
 			redirect(site_url('Berita'));
 		}
 	}

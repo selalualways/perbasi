@@ -31,6 +31,16 @@ class Berita_model extends CI_Model
       $this->db->where('id_berita', $id_berita);
       $this->db->update('berita', $data); 
     }
+
+    public function inqlastid()
+	{   
+       $query = $this->db->query('SELECT LAST_INSERT_ID() as lastid');
+        
+       $res = $query->row();
+       return $res;
+
+	}
 }
+
 
 ?>

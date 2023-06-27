@@ -26,13 +26,18 @@
                         <th>Judul</th>
                         <th>Foto</th>
                         <th>Isi</th>
+                        <th>Aksi</th>
                      </tr>
                      <?php foreach($data_berita as $row) { ?>
                      <tr>
                         <td><?php echo $row->id_berita; ?></td>
                         <td><?php echo $row->tanggal; ?></td>
                         <td><?php echo $row->judul; ?></td>
-                        <td><?php echo $row->foto; ?></td>
+                        <td>
+                        <?php if ($row->foto != NULL || $row->foto != "") { ?>
+                              <img src="<?php echo base_url('uploads/fotoberita/'.$row->foto); ?>" style="height: 90px;border: 1px solid black;" />
+                           <?php } ?>
+                        </td>
                         <td><?php echo $row->isi; ?></td>
                         <td>
                            <a href="<?php echo site_url('Berita/ubah_berita/'. $row->id_berita) ?>" class="btn btn-sm btn-warning"> 
