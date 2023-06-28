@@ -23,28 +23,28 @@
                   <table class="table table-bordered table-striped" id="tabelpemain">
                      <thead>
                      <tr> 
-                        <td align="center" width="30px">No</td>
-                        <td align="center" width="250px">Nama Pemain</td>
-                        <td align="center" width="150px">Klub</td>
-                        <td align="center" width="200px">Tempat Lahir</td>
-                        <td align="center" width="150px">Tanggal Lahir</td>
-                        <td align="center" width="150px">Tinggi Badan</td>
-                        <td align="center" width="150px">Berat Badan</td>
-                        <td align="center" width="150px">Foto Pemain</td>
-                        <td align="center" width="150px">Aksi</td>
+                        <td width="30px">No</td>
+                        <td width="350px">Nama Pemain</td>
+                        <td width="150px">Klub</td>
+                        <td width="200px">Tempat Lahir</td>
+                        <td width="150px">Tanggal Lahir</td>
+                        <td width="150px">Tinggi Badan</td>
+                        <td width="150px">Berat Badan</td>
+                        <td width="150px">Foto Pemain</td>
+                        <td width="250px">Aksi</td>
                      </tr>
                      </thead>
                      <tbody>
                      <?php foreach($data_pemain as $row) { ?>
                      <tr>
-                        <td align="center" width="30px"><?php echo $row->nik; ?></td>
+                        <td align="center"><?php echo $row->nik; ?></td>
                         <td><?php echo $row->nama_pemain; ?></td>
-                        <td width="150px"><?php echo $row->nama_klub; ?></td>
-                        <td align="center" width="150px"><?php echo $row->tempat_lahir; ?></td>
-                        <td align="center" width="150px"><?php echo $row->tanggal_lahir; ?></td>
-                        <td align="center" width="150px"><?php echo $row->tinggi_badan; ?></td>
-                        <td align="center" width="150px"><?php echo $row->berat_badan; ?></td>
-                        <td align="center" width="200px">
+                        <td><?php echo $row->nama_klub; ?></td>
+                        <td align="center"><?php echo $row->tempat_lahir; ?></td>
+                        <td align="center"><?php echo $row->tanggal_lahir; ?></td>
+                        <td align="center"><?php echo $row->tinggi_badan; ?></td>
+                        <td align="center"><?php echo $row->berat_badan; ?></td>
+                        <td align="center">
                            <?php if ($row->foto_pemain != NULL || $row->foto_pemain != "") { ?>
                               <img src="<?php echo base_url('uploads/fotopemain/'.$row->foto_pemain); ?>" style="height: 90px;border: 1px solid black;" />
                            <?php } ?>

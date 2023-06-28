@@ -19,19 +19,22 @@
                         </div>
                   </div>
                   <div class="body">
-                  <table class="table">
+                  <table class=table table-bordered table-striped" id="tabelberita">
+                     <thead>
                      <tr> 
-                        <th>ID Berita</th>
-                        <th>Tanggal</th>
-                        <th>Judul</th>
-                        <th>Foto</th>
-                        <th>Isi</th>
-                        <th>Aksi</th>
+                        <td width="30px">No</td>
+                        <td width="150px">Tanggal</td>
+                        <td width="300px">Judul</td>
+                        <td width="250px">Foto</th>
+                        <td width="500px">Isi</td>
+                        <td width="250px">Aksi</td>
                      </tr>
+                     </thead>
+                     <tbody>
                      <?php foreach($data_berita as $row) { ?>
                      <tr>
                         <td><?php echo $row->id_berita; ?></td>
-                        <td><?php echo $row->tanggal; ?></td>
+                        <td align="center"><?php echo $row->tanggal; ?></td>
                         <td><?php echo $row->judul; ?></td>
                         <td>
                         <?php if ($row->foto != NULL || $row->foto != "") { ?>
@@ -39,7 +42,7 @@
                            <?php } ?>
                         </td>
                         <td><?php echo $row->isi; ?></td>
-                        <td>
+                        <td class="text-nowrap">
                            <a href="<?php echo site_url('Berita/ubah_berita/'. $row->id_berita) ?>" class="btn btn-sm btn-warning"> 
                               <i class="material-icons">create</i> <span>Ubah</span></a>
                            <a href="<?php echo site_url('Berita/hapus_berita/'. $row->id_berita) ?>" class="btn btn-sm btn-danger"> 
@@ -47,7 +50,7 @@
                         </td>
                      </tr>
                      <?php } ?>
-
+                        </tbody>
                   </table>
                   </div>
                </div>
@@ -55,3 +58,8 @@
       </div>
    </div>
 </section>
+<script>
+   document.addEventListener('DOMContentLoaded', function(){
+      $('#tabelberita').DataTable();
+   })
+</script> 
