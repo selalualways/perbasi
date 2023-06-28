@@ -43,7 +43,7 @@
                <div class="col-md-3">
                   <div class="full">
                      <div class="contact-footer">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d120615.72236587871!2d73.07890527988283!3d19.140910987164396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1527759905404" width="600" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.219741087637!2d114.57935537580943!3d-3.2956885411257915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de423a80d47ba6b%3A0x8f5abfaddfe5a2d7!2sPoliteknik%20Negeri%20Banjarmasin!5e0!3m2!1sen!2sid!4v1687926286391!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                      </div>
                   </div>
                </div>
@@ -57,19 +57,19 @@
       </footer>
       <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
       <!-- ALL JS FILES -->
-      <script src="sports-master/js/all.js"></script>
+      <script src="<?php echo base_url('/sports-master/js/all.js'); ?>"></script>
       <!-- ALL PLUGINS -->
-      <script src="sports-master/js/custom.js"></script>
+      <script src="<?php echo base_url('/sports-master/js/custom.js'); ?>"></script>
       <!-- Jquery DataTable Plugin Js -->
-    <script src="../../plugins/jquery-datatable/jquery.dataTables.js"></script>
-    <script src="../../plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
-    <script src="../../plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
-    <script src="../../plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
-    <script src="../../plugins/jquery-datatable/extensions/export/jszip.min.js"></script>
-    <script src="../../plugins/jquery-datatable/extensions/export/pdfmake.min.js"></script>
-    <script src="../../plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
-    <script src="../../plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
-    <script src="../../plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
+    <script src="<?php echo base_url('/AdminBSB/plugins/jquery-datatable/jquery.dataTables.js'); ?>"></script>
+    <script src="<?php echo base_url('/AdminBSB/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js'); ?>"></script>
+    <script src="<?php echo base_url('/AdminBSB/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js'); ?>"></script>
+    <script src="<?php echo base_url('/AdminBSB/plugins/jquery-datatable/extensions/export/buttons.flash.min.js'); ?>"></script>
+    <script src="<?php echo base_url('/AdminBSB/plugins/jquery-datatable/extensions/export/jszip.min.js'); ?>"></script>
+    <script src="<?php echo base_url('/AdminBSB/plugins/jquery-datatable/extensions/export/pdfmake.min.js'); ?>"></script>
+    <script src="<?php echo base_url('/AdminBSB/plugins/jquery-datatable/extensions/export/vfs_fonts.js'); ?>"></script>
+    <script src="<?php echo base_url('/AdminBSB/plugins/jquery-datatable/extensions/export/buttons.html5.min.js'); ?>"></script>
+    <script src="<?php echo base_url('/AdminBSB/plugins/jquery-datatable/extensions/export/buttons.print.min.js'); ?>"></script>
 
     <script type="text-javascript">
     $(document).ready(function() {

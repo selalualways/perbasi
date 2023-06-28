@@ -13,6 +13,16 @@ class Pemain_model extends CI_Model
       return $this->db->get()->result();
     }
 
+    public function get_all_pemain_by_klub($id_klub)
+    {
+      $this->db->select('*');
+      $this->db->from('pemain');
+      $this->db->join('klub','klub.id_klub = pemain.id_klub');
+      $this->db->where('pemain.id_klub', $id_klub);
+
+      return $this->db->get()->result();
+    }
+
     public function get_pemain($nik)
     {
       $this->db->where('nik', $nik);
