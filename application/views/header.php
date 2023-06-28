@@ -14,30 +14,30 @@
    <link rel="shortcut icon" href="" type="sports-master/image/x-icon" />
    <link rel="apple-touch-icon" href="">
    <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="sports-master/css/bootstrap.min.css">
+   <link rel="stylesheet" href="<?php echo base_url('/sports-master/css/bootstrap.min.css'); ?>">
    <!-- Site CSS -->
-   <link rel="stylesheet" href="sports-master/style.css">
+   <link rel="stylesheet" href="<?php echo base_url('/sports-master/style.css'); ?>">
    <!-- Colors CSS -->
-   <link rel="stylesheet" href="sports-master/css/colors.css">
+   <link rel="stylesheet" href="<?php echo base_url('/sports-master/css/colors.css'); ?>">
    <!-- ALL VERSION CSS -->	
-   <link rel="stylesheet" href="sports-master/css/versions.css">
+   <link rel="stylesheet" href="<?php echo base_url('/sports-master/css/versions.css'); ?>">
    <!-- Responsive CSS -->
-   <link rel="stylesheet" href="sports-master/css/responsive.css">
+   <link rel="stylesheet" href="<?php echo base_url('/sports-master/css/responsive.css'); ?>">
    <!-- Custom CSS -->
-   <link rel="stylesheet" href="sports-master/css/custom.css">
+   <link rel="stylesheet" href="<?php echo base_url('/sports-master/css/custom.css'); ?>">
    <!-- font family -->
    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
    <!-- end font family -->
-   <link rel="stylesheet" href="sports-master/css/3dslider.css" />
+   <link rel="stylesheet" href="<?php echo base_url('/sports-master/css/3dslider.css'); ?>" />
    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-   <script src="sports-master/js/3dslider.js"></script>
+   <script src="<?php echo base_url('/sports-master/js/3dslider.js'); ?>"></script>
   
    </head>
    <body class="game_info" data-spy="scroll" data-target=".header">
       <!-- LOADER -->
       <div id="preloader">
-         <img align="center" class="preloader" src="sports-master/images/loadng-gg.gif" height="250" alt="">
+         <img align="center" class="preloader" src="<?php echo base_url('/sports-master/images/loadng-gg.gif'); ?>" height="250" alt="">
       </div>
       <!-- END LOADER -->
       <section id="top">
@@ -48,7 +48,7 @@
                      <div class="col-md-6">
                         <div class="full">
                            <div class="logo">
-                              <a href="index.html"><img src="sports-master/images/logoperbasi.png" alt="#" height="120" width="120" /></a>
+                              <a href="<?php echo site_url(); ?>"><img src="<?php echo base_url('/sports-master/images/logoperbasi.png'); ?>" alt="#" height="120" width="120" /></a>
                            </div>
                         </div>
                      </div>
@@ -89,65 +89,27 @@
                                     </div>
                                     <div class="collapse navbar-collapse js-navbar-collapse">
                                        <ul class="nav navbar-nav">
-                                          <li class="active"><a href="index.html">Home</a></li>
-                                          <li><a href="news.html">Berita</a></li>
+                                          <li class="active"><a href="<?php echo site_url(); ?>">Home</a></li>
+                                          <li><a href="<?php echo site_url('/Publik/berita'); ?>">Berita</a></li>
                                           <li class="dropdown mega-dropdown">
                                              <a href="match" class="dropdown-toggle" data-toggle="dropdown">Klub<span class="caret"></span></a>				
                                              <ul class="dropdown-menu mega-dropdown-menu">
                                                 <li class="col-sm-8">
-                                                   <ul>
-                                                      <li class="dropdown-header">Men Collection</li>
-                                                      <div id="menCollection" class="carousel slide" data-ride="carousel">
-                                                         <div class="carousel-inner">
-                                                            <div class="item active">
-                                                               <div class="banner-for-match"><a href="#"><img class="img-responsive" src="sports-master/images/match-banner1.jpg" alt="#" /></a></div>
-                                                            </div>
-                                                            <!-- End Item -->
-                                                            <div class="item">
-                                                               <div class="banner-for-match"><a href="#"><img class="img-responsive" src="sports-master/images/match-banner1.jpg" alt="#" /></a></div>
-                                                            </div>
-                                                            <!-- End Item -->
-                                                            <div class="item">
-                                                               <div class="banner-for-match"><a href="#"><img class="img-responsive" src="sports-master/images/match-banner1.jpg" alt="#" /></a></div>
-                                                            </div>
-                                                            <!-- End Item -->                                
-                                                         </div>
-                                                         <!-- End Carousel Inner -->
-                                                         <!-- Controls -->
-                                                         <a class="left carousel-control" href="#menCollection" role="button" data-slide="prev">
-                                                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                                         <span class="sr-only">Previous</span>
-                                                         </a>
-                                                         <a class="right carousel-control" href="#menCollection" role="button" data-slide="next">
-                                                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                                         <span class="sr-only">Next</span>
-                                                         </a>
-                                                      </div>
-                                                      <!-- /.carousel -->
-                                                   </ul>
-                                                </li>
-                                                <li class="col-sm-4">
                                                    <ul class="menu-inner">
-                                                      <li class="dropdown-header">Next Matchs</li>
-                                                      <li><a href="#">Sunday Morning vs Boston Celtics</a></li>
-                                                      <li><a href="#">Discovered vs undoubtable</a></li>
-                                                      <li><a href="#">Contrary vs classical</a></li>
-                                                      <li><a href="#">Discovered vs undoubtable</a></li>
-                                                      <li><a href="#">Contrary vs classical</a></li>
-                                                      <li><a href="#">Discovered vs undoubtable</a></li>
-                                                      <li><a href="#">Contrary vs classical</a></li>
-                                                      <li><a href="#">Discovered vs undoubtable</a></li>
+                                                      <?php foreach($data_klub as $row) { ?>
+                                                         <li><a href="<?php echo site_url('Publik/pemain/'.$row->id_klub); ?>"><?php echo $row->nama_klub; ?></a></li>
+                                                      <?php } ?>
                                                    </ul>
                                                 </li>
                                              </ul>
                                           </li>
                                        
-                                          <li><a href="about.html">Tentang</a></li>
+                                          <li><a href="<?php echo site_url('/Publik/tentang'); ?>">Tentang</a></li>
                                        </ul>
                                     </div>
                                     <!-- /.nav-collapse -->
                                  </nav>
-                                 <div class="search-bar">
+                                 <!-- <div class="search-bar">
                                     <div id="imaginary_container">
                                        <div class="input-group stylish-input-group">
                                           <input type="text" class="form-control"  placeholder="Search" >
@@ -156,7 +118,7 @@
                                           </span>
                                        </div>
                                     </div>
-                                 </div>
+                                 </div> -->
                               </div>
                            </div>
                         </div>

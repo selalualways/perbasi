@@ -18,10 +18,35 @@ class Publik extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+
+	public function __construct()
+	{
+		parent::__construct();
+    	$this->load->model('Klub_model');
+		$this->load->model('Pemain_model');
+	}
+
 	public function index()
 	{
-		$this->load->view('header');
+		$data = array(
+			'data_klub' =>$this->Klub_model->get_all_klub(),
+
+		);
+
+		$this->load->view('header', $data);
 		$this->load->view('publik/konten_depan');
+		$this->load->view('footer');
+	}
+
+	public function pemain($id_klub)
+	{
+		$data = array(
+			'data_klub' =>$this->Klub_model->get_all_klub(),
+			'data_pemain' =>$this->Pemain_model->get_all_pemain_by_klub($id_klub),
+		);
+
+		$this->load->view('header', $data);
+		$this->load->view('publik/pemain', $data);
 		$this->load->view('footer');
 	}
 
