@@ -19,19 +19,21 @@
                         </div>
                   </div>
                   <div class="body">
-                  <table class="table">
+                  <table class=table table-bordered table-striped" id="tabelwasit">
+                     <thead>
                      <tr> 
                         <th>NIK</th>
                         <th>Nama Wasit</th>
                         <th>Lisensi</th>
                      </tr>
-                     
+                     </thead>
+                     <tbody>
                      <?php foreach($data_wasit as $row) { ?>
                      <tr>
                         <td><?php echo $row->nik; ?></td>
                         <td><?php echo $row->nama_wasit; ?></td>
                         <td><?php echo $row->lisensi; ?></td>
-                        <td>
+                        <td class="text-nowrap">
                            <a href="<?php echo site_url('Wasit/ubah_wasit/'. $row->nik) ?>" class="btn btn-sm btn-warning"> 
                               <i class="material-icons">create</i> <span>Ubah</span></a>
                            <a href="<?php echo site_url('Wasit/hapus_wasit/'. $row->nik) ?>" class="btn btn-sm btn-danger"> 
@@ -39,7 +41,7 @@
                         </td>
                      </tr>
                      <?php } ?>
-
+                     </tbody>
                   </table>
                   </div>
                </div>
@@ -47,3 +49,8 @@
       </div>
    </div>
 </section>
+<script>
+   document.addEventListener('DOMContentLoaded', function(){
+      $('#tabelwasit').DataTable();
+   })
+</script> 
