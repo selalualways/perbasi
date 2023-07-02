@@ -62,7 +62,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="pages/helper-classes.html">
+                        <a href="<?php echo site_url('Login/logout') ?>">
                             <i class="material-icons">exit_to_app</i>
                             <span>Logout</span>
                         </a>

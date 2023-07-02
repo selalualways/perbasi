@@ -31,6 +31,13 @@ class Klub_model extends CI_Model
       $this->db->where('id_klub', $id_klub);
       $this->db->update('klub', $data); 
     }
+
+    public function data_klub(){
+      $this->db->select('*');
+      $this->db->from('klub');
+
+      return $this->db->get()->num_rows();
+    }
 }
 
 ?>

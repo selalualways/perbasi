@@ -3,23 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/userguide3/general/urls.html
-	 */
+	public function construct()
+	{
+		parent::__construct();
+		$this->load->model('Klub_model');
+	}
+
 	public function index()
 	{
+		
 		$data = array(
 			'menu_home' => 'active',
 			'menu_klub' => '',
@@ -27,9 +19,17 @@ class Admin extends CI_Controller {
 			'menu_pelatih' => '',
 			'menu_wasit' => '',
 			'menu_berita' => '',
+			
 		);
 
+		$data['klub'] = $this->Klub_model->data_klub();
+
 		$this->template->load('template/template_admin', 'admin/dashboard', $data);
+		
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 	}
+	
 
 }

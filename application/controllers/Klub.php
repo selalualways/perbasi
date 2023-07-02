@@ -34,10 +34,14 @@ class Klub extends CI_Controller {
 			'menu_wasit' => '',
 			'menu_berita' => '',
 			'data_klub' =>$this->Klub_model->get_all_klub(),
+			
 
 		);
 
 		$this->template->load('template/template_admin', 'klub/klub_list', $data);
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 	}
 	public function hapus_klub($id_klub)
 	{
@@ -66,6 +70,9 @@ class Klub extends CI_Controller {
 		);
 		
 		$this->template->load('template/template_admin', 'klub/form_klub', $data);
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 	}
 
 	public function _rules()
@@ -115,6 +122,9 @@ class Klub extends CI_Controller {
 		);
 		
 		$this->template->load('template/template_admin', 'klub/form_klub', $data);
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 	}
 
 	public function proses_ubah_klub()
