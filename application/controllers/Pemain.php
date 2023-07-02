@@ -39,6 +39,9 @@ class Pemain extends CI_Controller {
 		);
 
 		$this->template->load('template/template_admin', 'pemain/pemain_list', $data);
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 	}
 	public function hapus_pemain($nik)
 	{
@@ -71,6 +74,9 @@ class Pemain extends CI_Controller {
 		);
 		
 		$this->template->load('template/template_admin', 'pemain/form_pemain', $data);
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 	}
 
 	public function _rules()
@@ -167,6 +173,9 @@ class Pemain extends CI_Controller {
 		);
 		
 		$this->template->load('template/template_admin', 'pemain/form_pemain', $data);
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 	}
 
 	public function proses_ubah_pemain()

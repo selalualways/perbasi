@@ -38,6 +38,9 @@ class Berita extends CI_Controller {
 		);
 
 		$this->template->load('template/template_admin', 'berita/berita_list', $data);
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 	}
 
 	
@@ -69,6 +72,9 @@ class Berita extends CI_Controller {
 		);
 		
 		$this->template->load('template/template_admin', 'berita/form_berita', $data);
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 	}
 
 	public function _rules()
@@ -176,6 +182,9 @@ class Berita extends CI_Controller {
 		);
 		
 		$this->template->load('template/template_admin', 'berita/form_berita', $data);
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 	}
 
 	public function proses_ubah_berita()

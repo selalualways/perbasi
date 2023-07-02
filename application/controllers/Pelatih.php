@@ -38,6 +38,9 @@ class Pelatih extends CI_Controller {
 		);
 
 		$this->template->load('template/template_admin', 'pelatih/pelatih_list', $data);
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 	}
 	public function hapus_pelatih($nik)
 	{
@@ -64,6 +67,9 @@ class Pelatih extends CI_Controller {
 		);
 		
 		$this->template->load('template/template_admin', 'pelatih/form_pelatih', $data);
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 	}
 
 	public function _rules()
@@ -108,6 +114,9 @@ class Pelatih extends CI_Controller {
 		);
 		
 		$this->template->load('template/template_admin', 'pelatih/form_pelatih', $data);
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 	}
 
 	public function proses_ubah_pelatih()
