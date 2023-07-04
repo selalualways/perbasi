@@ -22,7 +22,7 @@ class Admin extends CI_Controller {
 			
 		);
 
-		$data['klub'] = $this->Klub_model->data_klub();
+		
 
 		$this->template->load('template/template_admin', 'admin/dashboard', $data);
 		
