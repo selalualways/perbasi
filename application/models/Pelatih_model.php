@@ -31,6 +31,13 @@ class Pelatih_model extends CI_Model
       $this->db->where('nik', $nik);
       $this->db->update('pelatih', $data); 
     }
+
+    public function data_pelatih(){
+      $this->db->select('*');
+      $this->db->from('pelatih');
+
+      return $this->db->get()->num_rows();
+    }
 }
 
 ?>

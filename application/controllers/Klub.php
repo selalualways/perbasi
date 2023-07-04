@@ -33,9 +33,6 @@ class Klub extends CI_Controller {
 			'menu_pelatih' => '',
 			'menu_wasit' => '',
 			'menu_berita' => '',
-			'data_klub' =>$this->Klub_model->get_all_klub(),
-			
-
 		);
 
 		$this->template->load('template/template_admin', 'klub/klub_list', $data);

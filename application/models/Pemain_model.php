@@ -47,13 +47,20 @@ class Pemain_model extends CI_Model
     }
 
     public function inqlastid()
-	{   
+	  {   
        $query = $this->db->query('SELECT LAST_INSERT_ID() as lastid');
         
        $res = $query->row();
        return $res;
 
-	}
+	  }
+
+    public function data_pemain(){
+      $this->db->select('*');
+      $this->db->from('pemain');
+
+      return $this->db->get()->num_rows();
+    }
 }
 
 ?>
