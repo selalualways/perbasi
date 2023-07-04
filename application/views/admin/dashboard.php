@@ -26,7 +26,7 @@
                         </div>
                         <div class="content">
                             <div class="text">TOTAL PEMAIN</div>
-                            <div class="number count-to" data-from="0" data-to="1425" data-speed="1000" data-fresh-interval="20"></div>
+                            <div class="number count-to" data-from="0" data-to="<?= $data_pemain; ?>" data-speed="1000" data-fresh-interval="20"></div>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="content">
                             <div class="text">TOTAL PELATIH</div>
-                            <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20"></div>
+                            <div class="number count-to" data-from="0" data-to="<?= $data_pelatih; ?>" data-speed="1000" data-fresh-interval="20"></div>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                         </div>
                         <div class="content">
                             <div class="text">TOTAL WASIT</div>
-                            <div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20"></div>
+                            <div class="number count-to" data-from="0" data-to="<?= $data_wasit; ?>" data-speed="1000" data-fresh-interval="20"></div>
                         </div>
                     </div>
                 </div>

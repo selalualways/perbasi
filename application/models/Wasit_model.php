@@ -31,6 +31,13 @@ class Wasit_model extends CI_Model
       $this->db->where('nik', $nik);
       $this->db->update('wasit', $data); 
     }
+
+    public function data_wasit(){
+      $this->db->select('*');
+      $this->db->from('wasit');
+
+      return $this->db->get()->num_rows();
+    }
 }
 
 ?>
