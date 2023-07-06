@@ -91,19 +91,7 @@
                                        <ul class="nav navbar-nav">
                                           <li class="active"><a href="<?php echo site_url(); ?>">Home</a></li>
                                           <li><a href="<?php echo site_url('/Publik/berita'); ?>">Berita</a></li>
-                                          <li class="dropdown mega-dropdown">
-                                             <a href="match" class="dropdown-toggle" data-toggle="dropdown">Klub<span class="caret"></span></a>				
-                                             <ul class="dropdown-menu mega-dropdown-menu">
-                                                <li class="col-sm-8">
-                                                   <ul class="menu-inner">
-                                                      <?php foreach($data_klub as $row) { ?>
-                                                         <li><a href="<?php echo site_url('Publik/pemain/'.$row->id_klub); ?>"><?php echo $row->nama_klub; ?></a></li>
-                                                      <?php } ?>
-                                                   </ul>
-                                                </li>
-                                             </ul>
-                                          </li>
-                                       
+                                          <li><a href="<?php echo site_url('/Publik/klub'); ?>">Klub</a></li>
                                           <li><a href="<?php echo site_url('/Publik/tentang'); ?>">Tentang</a></li>
                                        </ul>
                                     </div>
