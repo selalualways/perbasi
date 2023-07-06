@@ -29,12 +29,8 @@ class Publik extends CI_Controller {
 
 	public function index()
 	{
-		$data = array(
-			'data_klub' =>$this->Klub_model->get_all_klub(),
 
-		);
-
-		$this->load->view('header', $data);
+		$this->load->view('header');
 		$this->load->view('publik/konten_depan');
 		$this->load->view('footer');
 	}
@@ -42,23 +38,29 @@ class Publik extends CI_Controller {
 	public function pemain($id_klub)
 	{
 		$data = array(
-			'data_klub' =>$this->Klub_model->get_all_klub(),
 			'data_pemain' =>$this->Pemain_model->get_all_pemain_by_klub($id_klub),
 		);
 
-		$this->load->view('header', $data);
+		$this->load->view('header');
 		$this->load->view('publik/pemain', $data);
 		$this->load->view('footer');
 	}
 
-	public function tentang()
+	public function klub()
 	{
 		$data = array(
 			'data_klub' =>$this->Klub_model->get_all_klub(),
 		);
 
-		$this->load->view('header', $data);
-		$this->load->view('publik/about', $data);
+		$this->load->view('header');
+		$this->load->view('publik/klub', $data);
+		$this->load->view('footer');
+	}
+
+	public function tentang()
+	{
+		$this->load->view('header');
+		$this->load->view('publik/about');
 		$this->load->view('footer');
 	}
 
@@ -67,22 +69,20 @@ class Publik extends CI_Controller {
 		if($slug) {
 
 			$data = array(
-				'data_klub' => $this->Klub_model->get_all_klub(),
 				'berita' =>$this->Berita_model->get_berita_slug($slug),
 			);
 
-			$this->load->view('header', $data);
+			$this->load->view('header');
 			$this->load->view('publik/detail_berita', $data);
 			$this->load->view('footer');
 
 		} else {
 
 			$data = array(
-				'data_klub' => $this->Klub_model->get_all_klub(),
 				'data_berita' =>$this->Berita_model->get_all_berita(),
 			);
 
-			$this->load->view('header', $data);
+			$this->load->view('header');
 			$this->load->view('publik/berita', $data);
 			$this->load->view('footer');
 
