@@ -65,23 +65,7 @@
                         </table>
                      </div>
                   </aside>
-                  <div class="content-widget top-story" style="background: url(sports-master/images/bg-perbasi.jpg);">
-                     <div class="top-stroy-header">
-                        <h2>Top Soccer Headlines Story <a href="#" class="fa fa-fa fa-angle-right"></a></h2>
-                        <span class="date">July 05, 2017</span>
-                        <h2>Other Headlines</h2>
-                     </div>
-                     <ul class="other-stroies">
-                        <li><a href="#">Wenger Vardy won't start</a></li>
-                        <li><a href="#">Evans: Vardy just</a></li>
-                        <li><a href="#">Pires and Murray </a></li>
-                        <li><a href="#">Okazaki backing</a></li>
-                        <li><a href="#">Wolfsburg's Rodriguez</a></li>
-                        <li><a href="#">Jamie Vardy compared</a></li>
-                        <li><a href="#">Arsenal target Mkhitaryan</a></li>
-                        <li><a href="#">Messi wins libel case.</a></li>
-                     </ul>
-                  </div>
+                  
                </div>
                <div class="col-lg-8 col-sm-8 col-xs-12">
                   <div class="news-post-holder">
