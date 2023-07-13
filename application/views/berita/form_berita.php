@@ -80,8 +80,8 @@
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita"
-                                        value="<?php echo $isi ?>">
+                                    <textarea cols="100" name="isi" rows="10"  placeholder="Masukkan Isi Berita"><?php echo $isi ?></textarea>
+
                                     </div>
                                 </div>
                             </div>
