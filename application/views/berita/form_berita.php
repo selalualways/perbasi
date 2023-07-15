@@ -15,7 +15,7 @@
                         </div>
                   </div>
                   <div class="body">
-                    <?php echo form_open($action, 'class="form-horizontal"') ?>
+                    <?php echo form_open($action, 'class="form-horizontal" enctype="multipart/form-data"') ?>
                         <div class="row clearfix">
                             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                 <label for="id_berita">ID Berita</label>

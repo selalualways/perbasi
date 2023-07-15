@@ -78,8 +78,6 @@ class Klub extends CI_Controller {
 	{
 		$this->form_validation->set_rules('nama_klub','Nama Klub','trim|required');
 		$this->form_validation->set_rules('pengurus','Nama Pengurus','trim|required');
-		$this->form_validation->set_rules('logo','Logo','trim|required');
-		$this->form_validation->set_rules('struktur_pengurus','Struktur Pengurus','trim|required');
 	}
 
 	public function proses_tambah_klub()

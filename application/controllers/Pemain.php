@@ -88,7 +88,7 @@ class Pemain extends CI_Controller {
 		$this->form_validation->set_rules('id_klub','ID Klub','trim|required');
 		$this->form_validation->set_rules('tempat_lahir','Tempat Lahir','trim|required');
         $this->form_validation->set_rules('tanggal_lahir','Tanggal Lahir','trim|required');
-		$this->form_validation->set_rules('Posisi','Posisi','trim|required');
+		$this->form_validation->set_rules('posisi','Posisi','trim|required');
 		$this->form_validation->set_rules('jk','Jenis Kelamin','trim|required');
         $this->form_validation->set_rules('tinggi_badan','Tinggi Badan','trim|required');
         $this->form_validation->set_rules('berat_badan','Berat Badan','trim|required');
@@ -194,6 +194,7 @@ class Pemain extends CI_Controller {
 			$this->ubah_pemain($nik);
 		} else {
 			$nik = $this->input->post('nik');
+			$foto_pemain = $this->input->post('foto_pemain');
 			$data = array(
 				'nama_pemain' => $this->input->post('nama_pemain'),
 				'id_klub' => $this->input->post('id_klub'),
@@ -203,11 +204,52 @@ class Pemain extends CI_Controller {
 				'jk' => $this->input->post('jk'),
                 'tinggi_badan' => $this->input->post('tinggi_badan'),
                 'berat_badan' => $this->input->post('berat_badan'),
-                'foto_pemain' => $this->input->post('foto_pemain'),
 			);
+
+			if ($foto_pemain == NULL || $foto_pemain == "") {
+				$config['upload_path'] = './uploads/fotopemain/';
+				$config['allowed_types'] = 'jpg|jpeg|png';
+				$config['overwrite'] = true;
+				$filename = 'FotoPemain-'.$nik;
+				$config['file_name'] = $filename;
+	
+				// load library upload
+				$this->load->library('upload', $config);
+		
+				$this->upload->initialize($config);
+				
+				if($_FILES['foto_pemain']['name'])
+				{
+					if ($this->upload->do_upload('foto_pemain'))
+					{
+						$uploadfotopemain = $this->upload->data();
+						$data = array(
+						'namafile' =>$uploadfotopemain['file_name'],
+						'type' =>$uploadfotopemain['file_type']
+						
+						);
+						$fotopemain = $data['namafile'];
+
+						$nik = $this->input->post('nik');
+		
+						$data = array(
+							'foto_pemain' => $fotopemain,
+						);
+			
+						$this->Pemain_model->update($nik, $data);
+					}
+		
+				}
+			}
 
 			$this->Pemain_model->update($nik, $data);
 			redirect(site_url('Pemain'));
 		}
+	}
+
+	public function resetfoto($nik)
+	{
+		$this->Pemain_model->reset_foto($nik);
+		redirect(site_url('Pemain/ubah_pemain/'.$nik));
 	}
 }

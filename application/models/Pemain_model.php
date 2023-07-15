@@ -61,6 +61,23 @@ class Pemain_model extends CI_Model
 
       return $this->db->get()->num_rows();
     }
+
+    public function reset_foto($nik)
+    {
+      $data = array(
+          'nik' => $nik,
+          'foto_pemain' => NULL
+  
+      );
+      
+          if($this->db->update('pemain', $data, array('nik' => $nik)))
+          {
+             return true;  
+          }
+    
+  
+    }
+  
 }
 
 ?>

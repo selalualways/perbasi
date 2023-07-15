@@ -146,7 +146,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <?php if($foto_pemain == NULL || $foto_pemain == "") { ?>
                         <div class="row clearfix">
                             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                 <label for="foto_pemain">Foto Pemain</label>
@@ -159,6 +159,22 @@
                                 </div>
                             </div>
                         </div>
+                        <?php } else { ?>
+                            <div class="row clearfix">
+                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                <label for="foto_pemain">Foto Pemain</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                    <img src="<?php echo base_url('uploads/fotopemain/'.$foto_pemain); ?>" style="height: 90px;border: 1px solid black;" />
+                                    </div>
+                                    <br/>
+                                    <a class="resetfoto" href="<?php echo site_url('Pemain/resetfoto/'.$nik.''); ?>" ><i class="material-icons">clear</i> Reset Foto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php } ?>
 
                         <div class="row clearfix">
                             <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">

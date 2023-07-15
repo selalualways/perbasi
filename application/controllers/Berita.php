@@ -81,7 +81,6 @@ class Berita extends CI_Controller {
 	{
 		$this->form_validation->set_rules('tanggal','Tanggal','trim|required');
 		$this->form_validation->set_rules('judul','Judul','trim|required');
-		$this->form_validation->set_rules('foto','Foto','trim|required');
 		$this->form_validation->set_rules('isi','Isi Berita','trim|required');
 	}
 
@@ -124,11 +123,13 @@ class Berita extends CI_Controller {
 			$this->Berita_model->insert($data);
 			$id_berita = $this->input->post('id_berita');
 
+			$lastid = $this->Berita_model->inqlastid()->lastid;
+
 			// setting konfigurasi upload
 			$config['upload_path'] = './uploads/fotoberita/';
 			$config['allowed_types'] = 'jpg|jpeg|png';
 			$config['overwrite'] = true;
-			$filename = 'FotoBerita-'.$id_berita;
+			$filename = 'FotoBerita-'.$lastid;
 			$config['file_name'] = $filename;
 	
 			// load library upload
@@ -154,7 +155,7 @@ class Berita extends CI_Controller {
 						'foto' => $fotoberita,
 					);
 		
-					$this->Berita_model->update($id_berita, $data);
+					$this->Berita_model->update($lastid, $data);
 				}
 	
 			}
