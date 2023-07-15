@@ -63,7 +63,7 @@
                            <!-- button section -->
                            <ul class="login">
                               <li class="login-modal">
-                                 <a href="<?php echo site_url('Admin') ?>" class="login"><i class="fa fa-user"></i>Login</a>
+                                 <a href="<?php echo site_url('Admin') ?>" target="_blank" class="login"><i class="fa fa-user"></i>Login</a>
                               </li>
                            </ul>
                            <!-- end button section -->

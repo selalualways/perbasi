@@ -93,6 +93,34 @@
 
                         <div class="row clearfix">
                             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                <label for="posisi">Posisi</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="text" name="posisi" class="form-control" placeholder="Masukkan Posisi"
+                                        value="<?php echo $posisi ?>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row clearfix">
+                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                <label for="jk">Jenis Kelamin</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="text" name="jk" class="form-control" placeholder="Masukkan Jenis Kelamin"
+                                        value="<?php echo $jk ?>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row clearfix">
+                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                 <label for="tinggi_badan">Tinggi Badan</label>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
