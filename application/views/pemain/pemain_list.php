@@ -45,7 +45,7 @@
                         <td align="center"><?php echo $row->tempat_lahir; ?></td>
                         <td align="center"><?php echo $row->tanggal_lahir; ?></td>
                         <td align="center"><?php echo $row->posisi; ?></td>
-                        <td align="center"><?php echo $row->jk; ?></td>
+                        <td align="center"><?php echo $row->jk;?></td>
                         <td align="center"><?php echo $row->tinggi_badan; ?></td>
                         <td align="center"><?php echo $row->berat_badan; ?></td>
                         <td align="center">
