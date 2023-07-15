@@ -68,6 +68,8 @@ class Pemain extends CI_Controller {
 			'id_klub' => set_value('id_klub'),
 			'tempat_lahir' => set_value('tempat_lahir'),
 			'tanggal_lahir' => set_value('tanggal_lahir'),
+			'posisi' => set_value('posisi'),
+			'jk' => set_value('jk'),
             'tinggi_badan' => set_value('tinggi_badan'),
             'berat_badan' => set_value('berat_badan'),
             'foto_pemain' => set_value('foto_pemain'),
@@ -86,6 +88,8 @@ class Pemain extends CI_Controller {
 		$this->form_validation->set_rules('id_klub','ID Klub','trim|required');
 		$this->form_validation->set_rules('tempat_lahir','Tempat Lahir','trim|required');
         $this->form_validation->set_rules('tanggal_lahir','Tanggal Lahir','trim|required');
+		$this->form_validation->set_rules('Posisi','Posisi','trim|required');
+		$this->form_validation->set_rules('jk','Jenis Kelamin','trim|required');
         $this->form_validation->set_rules('tinggi_badan','Tinggi Badan','trim|required');
         $this->form_validation->set_rules('berat_badan','Berat Badan','trim|required');
 	}
@@ -102,6 +106,8 @@ class Pemain extends CI_Controller {
 			'id_klub' => $this->input->post('id_klub'),
 			'tempat_lahir' => $this->input->post('tempat_lahir'),
 			'tanggal_lahir' => $this->input->post('tanggal_lahir'),
+			'posisi' => $this->input->post('posisi'),
+			'jk' => $this->input->post('jk'),
             'tinggi_badan' => $this->input->post('tinggi_badan'),
             'berat_badan' => $this->input->post('berat_badan'),
 			);
@@ -166,6 +172,8 @@ class Pemain extends CI_Controller {
 			'id_klub' => $data_pemain->id_klub,
 			'tempat_lahir' => $data_pemain->tempat_lahir,
 			'tanggal_lahir' => $data_pemain->tanggal_lahir,
+			'posisi' => $data_pemain->posisi,
+			'jk' => $data_pemain->jk,
             'tinggi_badan' => $data_pemain->tinggi_badan,
             'berat_badan' => $data_pemain->berat_badan,
             'foto_pemain' => $data_pemain->foto_pemain,
@@ -191,6 +199,8 @@ class Pemain extends CI_Controller {
 				'id_klub' => $this->input->post('id_klub'),
 				'tempat_lahir' => $this->input->post('tempat_lahir'),
 				'tanggal_lahir' => $this->input->post('tanggal_lahir'),
+				'posisi' => $this->input->post('posisi'),
+				'jk' => $this->input->post('jk'),
                 'tinggi_badan' => $this->input->post('tinggi_badan'),
                 'berat_badan' => $this->input->post('berat_badan'),
                 'foto_pemain' => $this->input->post('foto_pemain'),

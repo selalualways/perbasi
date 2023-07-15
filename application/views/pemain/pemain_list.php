@@ -28,6 +28,8 @@
                         <td width="150px">Klub</td>
                         <td width="200px">Tempat Lahir</td>
                         <td width="150px">Tanggal Lahir</td>
+                        <td width="150px">Posisi</td>
+                        <td width="40px">Jenis Kelamin</td>
                         <td width="150px">Tinggi Badan</td>
                         <td width="150px">Berat Badan</td>
                         <td width="150px">Foto Pemain</td>
@@ -42,6 +44,8 @@
                         <td><?php echo $row->nama_klub; ?></td>
                         <td align="center"><?php echo $row->tempat_lahir; ?></td>
                         <td align="center"><?php echo $row->tanggal_lahir; ?></td>
+                        <td align="center"><?php echo $row->posisi; ?></td>
+                        <td align="center"><?php echo $row->jk; ?></td>
                         <td align="center"><?php echo $row->tinggi_badan; ?></td>
                         <td align="center"><?php echo $row->berat_badan; ?></td>
                         <td align="center">
