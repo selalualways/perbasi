@@ -38,6 +38,41 @@ class Klub_model extends CI_Model
 
       return $this->db->get()->num_rows();
     }
+
+    public function inqlastid()
+	{   
+       $query = $this->db->query('SELECT LAST_INSERT_ID() as lastid');
+        
+       $res = $query->row();
+       return $res;
+
+	}
+
+  public function reset_logo($id_klub)
+    {
+      $data = array(
+          'id_klub' => $id_klub,
+          'logo' => NULL
+      );
+      
+        if($this->db->update('klub', $data, array('id_klub' => $id_klub)))
+        {
+            return true;  
+        }
+    }
+
+    public function reset_struktur($id_klub)
+    {
+      $data = array(
+          'id_klub' => $id_klub,
+          'struktur_pengurus' => NULL
+      );
+      
+        if($this->db->update('klub', $data, array('id_klub' => $id_klub)))
+        {
+            return true;  
+        }
+    }
 }
 
 ?>

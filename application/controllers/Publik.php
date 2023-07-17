@@ -29,9 +29,12 @@ class Publik extends CI_Controller {
 
 	public function index()
 	{
+		$data = array(
+			'berita' => $this->Berita_model->get_berita_baru(4)
+		);
 
 		$this->load->view('header');
-		$this->load->view('publik/konten_depan');
+		$this->load->view('publik/konten_depan', $data);
 		$this->load->view('footer');
 	}
 

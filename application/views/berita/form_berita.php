@@ -18,25 +18,12 @@
                     <?php echo form_open($action, 'class="form-horizontal" enctype="multipart/form-data"') ?>
                         <div class="row clearfix">
                             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                <label for="id_berita">ID Berita</label>
-                            </div>
-                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" name="id_berita" class="form-control" placeholder="Masukkan ID Berita"
-                                            value="<?php echo $id_berita ?>">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row clearfix">
-                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                 <label for="tanggal">Tanggal</label>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                 <div class="form-group">
                                     <div class="form-line">
+                                        <input type="hidden" value="<?= $id_berita; ?>" name="id_berita" />
                                         <input type="datetime-local" name="tanggal" class="form-control" placeholder="Masukkan Tanggal"
                                         value="<?php echo $tanggal ?>">
                                     </div>
@@ -59,19 +46,35 @@
                             </div>
                         </div>
                        
-
+                        <?php if($foto == NULL || $foto == "") { ?>
                         <div class="row clearfix">
                             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                <label for="foto">Foto</label>
+                                <label for="foto_pemain">Foto Berita</label>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    <input type="file" name="foto" class="form-control" value="<?php echo $foto ?>">
+                                        <input type="file" name="foto_berita" class="form-control" value="<?php echo $foto ?>">
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <?php } else { ?>
+                            <div class="row clearfix">
+                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                <label for="foto_pemain">Foto Berita</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                    <img src="<?php echo base_url('uploads/fotoberita/'.$foto); ?>" style="height: 90px;border: 1px solid black;" />
+                                    </div>
+                                    <br/>
+                                    <a class="resetfoto" href="<?php echo site_url('Berita/resetfoto/'.$id_berita.''); ?>" ><i class="material-icons">clear</i> Reset Foto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php } ?>
 
                         <div class="row clearfix">
                             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">

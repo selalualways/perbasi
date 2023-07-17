@@ -67,15 +67,12 @@ class Pemain_model extends CI_Model
       $data = array(
           'nik' => $nik,
           'foto_pemain' => NULL
-  
       );
       
-          if($this->db->update('pemain', $data, array('nik' => $nik)))
-          {
-             return true;  
-          }
-    
-  
+        if($this->db->update('pemain', $data, array('nik' => $nik)))
+        {
+            return true;  
+        }
     }
   
 }

@@ -86,14 +86,83 @@ class Klub extends CI_Controller {
 		if($this->form_validation->run() == FALSE) {
 			$this->tambah_klub();
 		} else {
+			$logo = $this->input->post('logo');
+			$struktur_pengurus = $this->input->post('struktur_pengurus');
 			$data = array(
 			'nama_klub' => $this->input->post('nama_klub'),
 			'pengurus' => $this->input->post('pengurus'),
-			'logo' => $this->input->post('logo'),
-			'struktur_pengurus' => $this->input->post('struktur_pengurus'),
 			);
 
 			$this->Klub_model->insert($data);
+
+			$lastid = $this->Klub_model->inqlastid()->lastid;
+
+			// Upload Logo
+			$config['upload_path'] = './uploads/logo/';
+			$config['allowed_types'] = 'jpg|jpeg|png';
+			$config['overwrite'] = true;
+			$filename = 'Logo-'.$lastid;
+			$config['file_name'] = $filename;
+	
+			// load library upload
+			$this->load->library('upload', $config);
+	
+			$this->upload->initialize($config);
+			
+			if($_FILES['logo']['name'])
+			{
+				if ($this->upload->do_upload('logo'))
+				{
+					$uploadfotologo = $this->upload->data();
+					$data = array(
+					  'namafile' =>$uploadfotologo['file_name'],
+					  'type' =>$uploadfotologo['file_type']
+					  
+					);
+					$fotologo = $data['namafile'];
+	
+					$data = array(
+						'logo' => $fotologo,
+					);
+		
+					$this->Klub_model->update($lastid, $data);
+				}
+	
+			}
+
+			// Upload Struktur Pengurus
+			$config['upload_path'] = './uploads/struktur_pengurus/';
+			$config['allowed_types'] = 'jpg|jpeg|png';
+			$config['overwrite'] = true;
+			$filename = 'StrukturPengurus-'.$lastid;
+			$config['file_name'] = $filename;
+	
+			// load library upload
+			$this->load->library('upload', $config);
+	
+			$this->upload->initialize($config);
+			
+			if($_FILES['struktur_pengurus']['name'])
+			{
+				if ($this->upload->do_upload('struktur_pengurus'))
+				{
+					$uploadfotostrukturpengurus = $this->upload->data();
+					$data = array(
+					  'namafile' =>$uploadfotostrukturpengurus['file_name'],
+					  'type' =>$uploadfotostrukturpengurus['file_type']
+					  
+					);
+					$fotostrukturpengurus = $data['namafile'];
+	
+					$data = array(
+						'struktur_pengurus' => $fotostrukturpengurus,
+					);
+		
+					$this->Klub_model->update($lastid, $data);
+				}
+	
+			}
+
 			redirect(site_url('Klub'));
 		}
 	}
@@ -132,15 +201,101 @@ class Klub extends CI_Controller {
 			$this->ubah_klub($id_klub);
 		} else {
 			$id_klub = $this->input->post('id_klub');
+			$logo = $this->input->post('logo');
+			$struktur_pengurus = $this->input->post('struktur_pengurus');
 			$data = array(
 				'nama_klub' => $this->input->post('nama_klub'),
 				'pengurus' => $this->input->post('pengurus'),
-				'logo' => $this->input->post('logo'),
-				'struktur_pengurus' => $this->input->post('struktur_pengurus'),
 			);
+
+			// Logo
+			if ($logo == NULL || $logo == "") {
+				$config['upload_path'] = './uploads/logo/';
+				$config['allowed_types'] = 'jpg|jpeg|png';
+				$config['overwrite'] = true;
+				$filename = 'Logo-'.$id_klub;
+				$config['file_name'] = $filename;
+	
+				// load library upload
+				$this->load->library('upload', $config);
+		
+				$this->upload->initialize($config);
+				
+				if($_FILES['logo']['name'])
+				{
+					if ($this->upload->do_upload('logo'))
+					{
+						$uploadfotologo = $this->upload->data();
+						$data = array(
+						'namafile' =>$uploadfotologo['file_name'],
+						'type' =>$uploadfotologo['file_type']
+						
+						);
+						$fotologo = $data['namafile'];
+
+						$id_klub = $this->input->post('id_klub');
+		
+						$data = array(
+							'logo' => $fotologo,
+						);
+			
+						$this->Klub_model->update($id_klub, $data);
+					}
+		
+				}
+			}
+
+			// Struktur Pengurus
+			if ($struktur_pengurus == NULL || $struktur_pengurus == "") {
+				$config['upload_path'] = './uploads/struktur_pengurus/';
+				$config['allowed_types'] = 'jpg|jpeg|png';
+				$config['overwrite'] = true;
+				$filename = 'StrukturPengurus-'.$id_klub;
+				$config['file_name'] = $filename;
+	
+				// load library upload
+				$this->load->library('upload', $config);
+		
+				$this->upload->initialize($config);
+				
+				if($_FILES['struktur_pengurus']['name'])
+				{
+					if ($this->upload->do_upload('struktur_pengurus'))
+					{
+						$uploadfotostrukturpengurus = $this->upload->data();
+						$data = array(
+						'namafile' =>$uploadfotostrukturpengurus['file_name'],
+						'type' =>$uploadfotostrukturpengurus['file_type']
+						
+						);
+						$fotostrukturpengurus = $data['namafile'];
+
+						$id_klub = $this->input->post('id_klub');
+		
+						$data = array(
+							'struktur_pengurus' => $fotostrukturpengurus,
+						);
+			
+						$this->Klub_model->update($id_klub, $data);
+					}
+		
+				}
+			}
 
 			$this->Klub_model->update($id_klub, $data);
 			redirect(site_url('Klub'));
 		}
+	}
+
+	public function resetlogo($id_klub)
+	{
+		$this->Klub_model->reset_logo($id_klub);
+		redirect(site_url('Klub/ubah_klub/'.$id_klub));
+	}
+
+	public function resetstruktur($id_klub)
+	{
+		$this->Klub_model->reset_struktur($id_klub);
+		redirect(site_url('Klub/ubah_klub/'.$id_klub));
 	}
 }

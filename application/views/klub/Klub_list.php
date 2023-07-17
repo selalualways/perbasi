@@ -36,8 +36,16 @@
                         <td align="center" width="30px"><?php echo $row->id_klub; ?></td>
                         <td><?php echo $row->nama_klub; ?></td>
                         <td><?php echo $row->pengurus; ?></td>
-                        <td alugn="center"><?php echo $row->logo; ?></td>
-                        <td align="center"><?php echo $row->struktur_pengurus; ?></td>
+                        <td align="center">
+                           <?php if ($row->logo != NULL || $row->logo != "") { ?>
+                              <img src="<?php echo base_url('uploads/logo/'.$row->logo); ?>" style="height: 90px;border: 1px solid black;" />
+                           <?php } ?>
+                        </td>
+                        <td align="center">
+                           <?php if ($row->struktur_pengurus != NULL || $row->struktur_pengurus != "") { ?>
+                              <img src="<?php echo base_url('uploads/struktur_pengurus/'.$row->struktur_pengurus); ?>" style="height: 90px;border: 1px solid black;" />
+                           <?php } ?>
+                        </td>
                         <td class="text-nowrap">
                            <a href="<?php echo site_url('Klub/ubah_klub/'. $row->id_klub) ?>" class="btn btn-sm btn-warning"> 
                               <i class="material-icons">create</i> <span>Ubah</span></a>
