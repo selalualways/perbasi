@@ -19,7 +19,7 @@
                         </div>
                   </div>
                   <div class="body">
-                  <table class="table table-bordered table-striped" id="tabelklub">
+                  <table class="table-responsive table-bordered table-striped" id="tabelklub">
                      <thead>
                         <tr> 
                            <td width="30px">No</td>

@@ -19,7 +19,7 @@
                         </div>
                   </div>
                   <div class="body">
-                  <table class=table table-bordered table-striped" id="tabelpelatih">
+                  <table class="table-responsive table-bordered table-striped" id="tabelpelatih">
                   <thead>
                      <tr> 
                         <th>NIK</th>

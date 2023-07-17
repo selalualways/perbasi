@@ -20,7 +20,7 @@
                   </div>
                   
                   <div class="body">
-                  <table class="table table-bordered table-striped" id="tabelpemain">
+                  <table class="table-responsive table-bordered table-striped" id="tabelpemain">
                      <thead>
                      <tr> 
                         <td width="30px">No</td>
@@ -43,7 +43,7 @@
                         <td><?php echo $row->nama_pemain; ?></td>
                         <td><?php echo $row->nama_klub; ?></td>
                         <td align="center"><?php echo $row->tempat_lahir; ?></td>
-                        <td align="center"><?php echo $row->tanggal_lahir; ?></td>
+                        <td align="center"><?php echo date('d-m-Y', strtotime($row->tanggal_lahir));?> </td>
                         <td align="center"><?php echo $row->posisi; ?></td>
                         <td align="center"><?php echo $row->jk;?></td>
                         <td align="center"><?php echo $row->tinggi_badan; ?></td>
