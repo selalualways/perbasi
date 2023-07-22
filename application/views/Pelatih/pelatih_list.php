@@ -10,7 +10,7 @@
                   <div class="header">
                         <div class="row clearfix">
                            <div class="col-xs-12 col-sm-6">
-                              <h2>DAFTAR Pelatih</h2>
+                              <h2>DAFTAR PELATIH</h2>
                            </div>
                            <div class="col-xs-12 col-sm-6 align-right">
                            <a href="<?php echo site_url('Pelatih/tambah_pelatih') ?>" class="btn btn-primary"> 
