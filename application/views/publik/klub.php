@@ -5,7 +5,7 @@
                <div class="col-md-4 column">
                   <div class="card">
                   <a href="<?php echo site_url('Publik/pemain/'.$row->id_klub); ?>">
-                     <img class="img-responsive" src="<?php echo base_url('/uploads/logoklub/'.$row->logo); ?>" alt="KLUB" style="width:100%">
+                     <img class="img-responsive" src="<?php echo base_url('/uploads/logo/'.$row->logo); ?>" alt="KLUB" style="width:100%">
                      <div class="">
                         <h4><?php echo $row->nama_klub; ?></h4>
                         <p class="title"><?php echo $row->nama_klub; ?></p>
