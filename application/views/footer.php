@@ -9,32 +9,21 @@
                         </div>
                         <p>Most of our events have hard and easy route choices as we are always keen to encourage new riders.</p>
                         <ul class="social-icons style-4 pull-left">
-                           <li><a class="twitter" href="https://twitter.com/perbasibjm"><i class="fa fa-twitter"></i></a></li>
-                           <li><a class="instagram" href="https://www.instagram.com/perbasi.bjm/"><i class="fa fa-instagram"></i></a></li>
+                           <li><a class="instagram" href="https://www.instagram.com/perbasi.bjm/" target="_blank"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                      </div>
                   </div>
                </div>
                <div class="col-md-2">
-                  <div class="full">
-                     <div class="footer-widget">
-                        <h3>Menu</h3>
-                        <ul class="footer-menu">
-                           <li><a href="about.html">Tentang Kami</a></li>
-                           <li><a href="team.html">Our Team</a></li>
-                           <li><a href="blog.html">Our Blog</a></li>
-                           <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                     </div>
-                  </div>
+                  
                </div>
                <div class="col-md-3">
                   <div class="full">
                      <div class="footer-widget">
-                        <h3>Contact us</h3>
+                        <h3>Kontak kami</h3>
                         <ul class="address-list">
                            <li><i class="fa fa-map-marker"></i> Jl. Gerilya, Graha Mahatama, Blok Jambu Air No.5 Banjarmasin, Kalimantan Selatan</li>
-                           <li><i class="fa fa-phone"></i> 123 456 7890</li>
+                           <li><i class="fa fa-phone"></i>+62 819-5494-713</li>
                            <li><i style="font-size:20px;top:5px;" class="fa fa-envelope"></i> perbasibjm@gmail.com</li>
                         </ul>
                      </div>
