@@ -130,41 +130,20 @@
                      <div class="carousel-caption">
                         <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"></div>
                         <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                           <div class="slider-contant" data-animation="animated fadeInRight">
-                              <h3>Don’t Panic<br> <span class="color-yellow"> Clint</span><br>is on the way</h3>
-                              <p>Waja sampai kaputing<br>
-                              Anjay gurinjay
-                              </p>
-                              <button class="btn btn-primary btn-lg">Read More</button>
-                           </div>
+                           
                         </div>
                      </div>
                   </div>
                   <!-- /.item -->
                   <!-- Second slide -->
-                  <div class="item skyblue" data-ride="carousel" data-interval="5000">
-                     <div class="carousel-caption">
-                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"></div>
-                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                           <div class="slider-contant" data-animation="animated fadeInRight">
-                              <h3>If you Don’t Practice<br>You <span class="color-yellow">Don’t Derserve</span><br>to win!</h3>
-                              <p>You can make a case for several potential winners of<br>the expanded European Championships.</p>
-                              <button class="btn btn-primary btn-lg">Button</button>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                  
                   <!-- /.item -->
                   <!-- Third slide -->
                   <div class="item darkerskyblue" data-ride="carousel" data-interval="5000">
                      <div class="carousel-caption">
                         <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"></div>
                         <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                           <div class="slider-contant" data-animation="animated fadeInRight">
-                              <h3>If you Don’t Practice<br>You <span class="color-yellow">Don’t Derserve</span><br>to win!</h3>
-                              <p>You can make a case for several potential winners of<br>the expanded European Championships.</p>
-                              <button class="btn btn-primary btn-lg">Button</button>
-                           </div>
+                           
                         </div>
                      </div>
                   </div>
@@ -188,7 +167,7 @@
                      <p class="headline"><i class="fa fa-star" aria-hidden="true"></i> Top Headlines :</p>
                      <!--made by vipul mirajkar thevipulm.appspot.com-->
                      <h1>
-                     <a href="" class="typewrite" data-period="2000" data-type='["Clint hero debes.", "Oyaji Whiteman top 1 retri indonesia."]'>
+                     <a href="" class="typewrite" data-period="2000" data-type='["Uno Jabat Ketua Umum Perbasi Banjarmasin 2022-2026."]'>
                      <span class="wrap"></span>
                      </a>
                      </h1	   
