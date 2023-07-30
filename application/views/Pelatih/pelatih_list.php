@@ -19,12 +19,16 @@
                         </div>
                   </div>
                   <div class="body">
-                  <table class="table table-striped"">
+                  <table class="table table-bordered table-striped" id="tabelpelatih">
+                     <thead>
                      <tr> 
                         <th>NIK</th>
                         <th>Nama Pelatih</th>
                         <th>Lisensi</th>
+                        <th>Aksi</th>
                      </tr>
+                  </thead>
+                  <tbody>
                      <?php foreach($data_pelatih as $row) { ?>
                      <tr>
                         <td><?php echo $row->nik; ?></td>
@@ -38,6 +42,7 @@
                         </td>
                      </tr>
                      <?php } ?>
+                     </tbody>
                   </table>
                   </div>
                </div>
@@ -45,3 +50,8 @@
       </div>
    </div>
 </section>
+<script>
+   document.addEventListener('DOMContentLoaded', function(){
+      $('#tabelpelatih').DataTable();
+   })
+</script> 
