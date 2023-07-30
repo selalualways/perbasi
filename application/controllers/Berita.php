@@ -137,9 +137,9 @@ class Berita extends CI_Controller {
 	
 			$this->upload->initialize($config);
 			
-			if($_FILES['foto']['name'])
+			if($_FILES['foto_berita']['name'])
 			{
-				if ($this->upload->do_upload('foto'))
+				if ($this->upload->do_upload('foto_berita'))
 				{
 					$uploadfotoberita = $this->upload->data();
 					$data = array(
