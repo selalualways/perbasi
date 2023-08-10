@@ -33,7 +33,7 @@ class Login extends CI_Controller {
 			redirect(base_url("Admin"));
  
 		}else{
-			$this->load->view('login');
+			$this->load->view('login/login');
 		}
 	}
  
